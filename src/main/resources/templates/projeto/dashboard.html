@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="'layout/LayoutPadrao'"
+	xmlns:data="http://www.thymeleaf.org/extras/data"
+	xmlns:brewer="http://brewer.algaworks.com">
+
+<head></head>
+
+<body>
+	<section layout:fragment="conteudo">
+
+		<div class="page-header">
+			<div class="container-fluid">
+				<h1 style="font-size: 40px">SITCon</h1>
+			</div>
+		</div>
+		
+	</section>
+
+
+
+</body>
+
+<th:block layout:fragment="javascript-extra">
+	<script th:src="@{/javascripts/vendors/Chart.min.js}"></script>
+	<script th:src="@{/javascripts/dashboard.graficos.js}"></script>
+</th:block>
+
+
+<!--  <script src="/layout/javascripts/vendors/Chart.min.js"></script>
+<script src="/layout/javascripts/dashboard.graficos.js"></script> -->
+</html>
