@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="'layout/LayoutPadrao'">
+
+<head>
+
+</head>
+
+<body>
+	<section layout:fragment="conteudo">
+
+		<div class="page-header">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-8">
+						<h1 style="font-size: 40px">Pesquisar por Demandas</h1>
+					</div>
+
+					<div class="col-sm-4">
+						<div class="aw-page-header-controls">
+							<button type="button" class="btn btn-danger">
+								Demandas Pendentes <span class="badge badge-light">4</span>
+							</button>
+							
+							<button type="button" class="btn btn-success" style="padding-right: 10px;">
+								Demandas Verificadas <span class="badge badge-light">4</span>
+							</button>
+						</div>
+
+					</div>
+					
+					
+				</div>
+
+			</div>
+		</div>
+
+		<div class="container-fluid">
+
+			<div class="table-responsive  bw-tabela-simples">
+				<table class="table  table-hover">
+					<thead>
+						<tr>
+							<th class="table-cervejas-col-foto"></th>
+							<th class="table-cervejas-col-sku">
+								<!-- <th:block th:replace="fragments/Ordenacao :: order(${pagina},'sku','SKU')"></th:block> -->
+								<brewer:order page="${pagina}" field="sku" text="SKU" />
+							</th>
+							<th class="table-cervejas-col-nome"><brewer:order
+									page="${pagina}" field="nome" text="Nome" /></th>
+							<th class="table-cervejas-col-estilo">ID#</th>
+							<th class="table-cervejas-col-origem">Descricao</th>
+
+							<th class="table-cervejas-col-acoes"></th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr th:each="demanda : ${demandas}"
+							th:if="${not #lists.isEmpty(demandas)}">
+							<td class="text-center"></td>
+							<td class="text-center" th:text="${demanda.id}">AA1234</td>
+							<td th:text="${demanda.descricao}">Cerveja Stella</td>
+
+						</tr>
+						<tr th:if="${#lists.isEmpty(demandas)}">
+							<td colspan="7">Nenhum Documento encontrado</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+
+	</section>
+
+</body>
+
+
+
+
+
+</html>

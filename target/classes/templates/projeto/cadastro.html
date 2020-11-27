@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="'layout/LayoutPadrao'">
+
+<head>
+
+</head>
+
+<body>
+	<section layout:fragment="conteudo">
+
+		<div class="page-header">
+			<div class="container-fluid">
+				<h1 style="font-size: 40px">Observatório de Projetos</h1>
+			</div>
+		</div>
+
+		<div class="container-fluid">
+
+			<th:block th:include="fragments/MensagemSucesso"></th:block>
+
+
+			<form action="cadastrarProjeto" method="POST" th:object="${projeto}"
+				class="form-vertical  js-form-loading">
+
+				<th:block th:include="fragments/MensagensErroValidacao"></th:block>
+
+				<div class="alert  alert-danger  alert-dismissible" role="alert"
+					th:if="${msg!=null}">
+					<button type="button" class="close" data-dismiss="alert">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<th:block th:each="e : ${msg}">
+						<div>
+							<i class="fa  fa-exclamation-circle" th:text="${e}"> </i>
+						</div>
+					</th:block>
+				</div>
+
+				<div class="row">
+
+
+					<div class="col-sm-2  form-group  bw-required">
+						<label for="instituicao" class="control-label">Instituição</label>
+						<select id="instituicao" class="form-control"
+							th:field="*{instituicao}">
+							<option value="">Selecione a instituição</option>
+							<option th:each="instituicao : ${instituicoes}"
+								th:value="${instituicao}" th:text="${instituicao.descricao}"></option>
+						</select>
+					</div>
+
+					<div class="col-sm-2  form-group  bw-required">
+						<label for="natureza" class="control-label">Natureza</label> <select
+							id="natureza" class="form-control" th:field="*{natureza}">
+							<option value="">Selecione a natureza</option>
+							<option th:each="natureza : ${naturezas}" th:value="${natureza.descricao}"
+								th:text="${natureza.descricao}"></option>
+						</select>
+					</div>
+					
+					<div class="col-sm-2  form-group  bw-required">
+						<label for="porte" class="control-label">Porte</label> <select
+							id="porte" class="form-control" th:field="*{porte}">
+							<option value="">Selecione o porte</option>
+							<option th:each="porte : ${porteLista}" th:value="${porte.descricao}"
+								th:text="${porte.descricao}"></option>
+						</select>
+					</div>
+
+
+					<div class="col-sm-3  form-group  bw-required">
+						<label for="estado" class="control-label">Estado</label> <select
+							id="estado" class="form-control" th:field="*{estado}" name="estado">
+							<option value="">Selecione o estado</option>
+							<option th:each="estado : ${estados}" th:value="${estado.descricao}"
+								th:text="${estado.descricao}"></option>
+						</select>
+					</div>
+
+					<div class="col-sm-3  form-group">
+						<label for="cidade">Cidade</label> <input id="cidade" type="text"
+							class="form-control" th:field="*{cidade}" name="cidade" />
+					</div>
+
+
+
+
+				</div>
+				
+				<div class="row">
+					<div class="col-sm-4  form-group">
+						<label for="nome">Nome do Projeto</label> <input id="nome"
+							type="text" class="form-control" th:field="*{nome}" name="nome" />
+					</div>
+					
+					<div class="col-sm-2  form-group  bw-required">
+						<label for="situacao" class="control-label">Situação</label> <select id="situacao" class="form-control"
+							th:field="*{situacao}">
+							<option value="">Selecione --</option>
+							<option th:each="situacao : ${situacaoLista}" th:value="${situacao.descricao}"
+								th:text="${situacao.descricao}">Ciclo</option>
+						</select>
+					</div>
+
+
+
+					<div class="col-sm-6  form-group  bw-required">
+						<label for="cicloVida" class="control-label">Ciclo de Vida
+							do Projeto</label> <select id="cicloVida" class="form-control"
+							th:field="*{cicloVida}">
+							<option value="">Selecione --</option>
+							<option th:each="ciclo : ${ciclos}" th:value="${ciclo.descricao}"
+								th:text="${ciclo.descricao}">Ciclo</option>
+						</select>
+					</div>
+
+
+				</div>
+
+				<div class="row">
+					<div class="col-sm-12  form-group">
+						<label for="escopo">Escopo com EAP (Previsto e Realizado)</label>
+						<textarea id="escopo" rows="2" class="form-control" name="escopo"
+							th:value="*{escopo}" th:text="*{escopo}"></textarea>
+
+					</div>
+
+					
+				</div>
+				
+				
+
+				<div class="row">
+
+
+					<div class="col-sm-3  form-group  bw-required">
+						<label for="produtos" class="control-label">Produtos</label> <select id="produtos" class="form-control"
+							th:field="*{produtos}" >
+							<option value="">Selecione --</option>
+							<option th:each="produtos : ${produtosLista}"
+								th:value="${produtos.descricao}" th:text="${produtos.descricao}"></option>
+						</select>
+
+					</div>
+
+				
+
+
+					<div class="col-sm-3  form-group  bw-required">
+						<label for="equipe" class="control-label">Equipe do
+							Projeto</label> <select id="equipe" class="form-control"
+							th:field="*{equipe}">
+							<option value="">Selecione --</option>
+							<option th:each="equipe : ${equipes}"
+								th:value="${equipe.descricao}" th:text="${equipe.descricao}"></option>
+						</select>
+
+					</div>
+
+					<div class="col-sm-3  form-group">
+						<label for="anoInicio">Ano de Início:</label> <input
+							id="anoInicio" type="text" class="form-control"
+							th:field="*{anoInicio}" name="anoInicio" />
+					</div>
+
+					<div class="col-sm-3  form-group  bw-required">
+						<label for="mesInicio" class="control-label">Mês de Início</label>
+						<select id="mesInicio" class="form-control"
+							th:field="*{mesInicio}">
+							<option value="">Selecione o--</option>
+							<option th:each="mesInicio : ${mesInicioLista}"
+								th:value="${mesInicio.descricao}"
+								th:text="${mesInicio.descricao}"></option>
+						</select>
+					</div>
+				</div>
+
+
+
+
+				<div class="row">
+
+
+
+					<div class="col-sm-3  form-group">
+						<label for="anoEncerramento">Ano de Encerramento:</label> <input
+							id="anoEncerramento" type="text" th:fiel="anoEncerramento"
+							name="anoEncerramento" class="form-control" />
+					</div>
+
+					<div class="col-sm-3  form-group  bw-required">
+						<label for="mesEncerramento" class="control-label">Mês de Encerramento</label>
+						<select id="mesEncerramento" class="form-control"
+							th:field="*{mesEncerramento}">
+							<option value="">Selecione o--</option>
+							<option th:each="mesEncerramento : ${mesEncerramentoLista}"
+								th:value="${mesEncerramento.descricao}"
+								th:text="${mesEncerramento.descricao}"></option>
+						</select>
+					</div>
+
+					<div class="col-sm-3  form-group  bw-required">
+						<label for="coordenador" class="control-label">Coordenador/Gerente</label>
+						<select id="coordenador" class="form-control"
+							th:field="*{coordenador}">
+							<option value="">Selecione o--</option>
+							<option th:each="coordenador : ${coordenadores}"
+								th:value="${coordenador.descricao}"
+								th:text="${coordenador.descricao}"></option>
+						</select>
+					</div>
+
+
+
+					<div class="col-sm-3  form-group  bw-required">
+						<label for="marcos" class="control-label">Marcos do projeto</label>
+						<select id="marcos" class="form-control"
+							th:field="*{marcos}">
+							<option value="">Selecione o--</option>
+							<option th:each="marcos : ${marcosLista}"
+								th:value="${marcos.descricao}"
+								th:text="${marcos.descricao}"></option>
+						</select>
+					</div>
+
+				</div>
+
+				<div class="row">
+					<div class="col-sm-3  form-group  bw-required">
+						<label for="unidadeExecucao" class="control-label">Unidade Executora</label>
+						<select id="unidadeExecucao" class="form-control"
+							th:field="*{unidadeExecucao}">
+							<option value="">Selecione o--</option>
+							<option th:each="unidadeExecucao : ${unidadeExecutoraLista}"
+								th:value="${unidadeExecucao.descricao}"
+								th:text="${unidadeExecucao.descricao}"></option>
+						</select>
+					</div>
+
+					<div class="col-sm-3  form-group  bw-required">
+						<label for="coordenador" class="control-label">Coordenador/Gerente</label>
+						<select id="coordenador" class="form-control"
+							th:field="*{coordenador}">
+							<option value="">Selecione o--</option>
+							<option th:each="coordenador : ${coordenadores}"
+								th:value="${coordenador.descricao}"
+								th:text="${coordenador.descricao}"></option>
+						</select>
+					</div>
+
+					<div class="col-sm-3  form-group  bw-required">
+						<label for="atividades" class="control-label">Atividades</label> <select
+							id="atividades" class="form-control selectpicker"
+							data-style="btn-primary" th:field="*{atividades}">
+							<option value="">Selecione</option>
+							<option th:each="atividades : ${atividadesLista}" th:value="${atividades.descricao}"
+								class="js-tooltip js-tooltip  js-exclusao-btn" title="TESTE"
+								th:text="${atividades.descricao}"></option>
+						</select>
+					</div>
+
+
+				</div>
+
+				<div class="row">
+
+					<div class="col-sm-3  form-group">
+						<label for="orcamentoPrevisto">Orçamento Previsto</label>
+						<div class="input-group">
+							<span class="input-group-addon">R$</span> <input
+								id="orcamentoPrevisto" type="text" class="form-control"
+								name="orcamentoPrevisto" th:field="*{orcamentoPrevisto}"
+								placeholder="">
+						</div>
+					</div>
+
+					<div class="col-sm-3  form-group">
+						<label for="orcamentoRealizado">Orçamento Realizado</label>
+						<div class="input-group">
+							<span class="input-group-addon">R$</span> <input
+								id="orcamentoRealizado" type="text" class="form-control"
+								name="orcamentoRealizado" th:field="*{orcamentoRealizado}"
+								placeholder="">
+						</div>
+					</div>
+
+					<div class="col-sm-3  form-group  bw-required">
+						<label for="stakeholders" class="control-label">Stakeholders</label>
+						<select id="stakeholders" class="form-control selectpicker"
+							data-style="btn-primary" th:field="*{stakeholders}">
+							<option value="">Selecione</option>
+							<option th:each="stakeholders : ${stakeholdersLista}"
+								th:value="${stakeholders.descricao}"
+								class="js-tooltip js-tooltip  js-exclusao-btn" title="TESTE"
+								th:text="${stakeholders.descricao}"></option>
+						</select>
+					</div>
+
+					<div class="col-sm-3  form-group  bw-required">
+						<label for="gestaoMudanca" class="control-label"> Processo
+							de gerenciamento de mudanças</label> <select id="gestaoMudanca"
+							class="form-control selectpicker" data-style="btn-primary"
+							th:field="*{gestaoMudanca}">
+							<option value="">Selecione</option>
+							<option th:each="gestaoMudanca : ${gestaoMudancas}"
+								th:value="${gestaoMudanca.descricao}"
+								class="js-tooltip js-tooltip  js-exclusao-btn" title="TESTE"
+								th:text="${gestaoMudanca.descricao}"></option>
+						</select>
+					</div>
+
+
+				</div>
+		
+
+		<div class="row">
+			<div class="col-sm-3  form-group  bw-required">
+						<label for="planoComunicacao" class="control-label"> Plano de comunicação</label> <select id="planoComunicacao"
+							class="form-control selectpicker" data-style="btn-primary"
+							th:field="*{planoComunicacao}">
+							<option value="">Selecione</option>
+							<option th:each="planoComunicacao : ${planoComunicacoes}"
+								th:value="${planoComunicacao.descricao}"
+								class="js-tooltip js-tooltip  js-exclusao-btn" title="TESTE"
+								th:text="${planoComunicacao.descricao}"></option>
+						</select>
+			</div>
+			
+			<div class="col-sm-3  form-group  bw-required">
+						<label for="analiseQualitativa" class="control-label"> Plano de comunicação</label> <select id="analiseQualitativa"
+							class="form-control selectpicker" data-style="btn-primary"
+							th:field="*{analiseQualitativa}">
+							<option value="">Selecione</option>
+							<option th:each="analiseQualitativa : ${analiseQualitativas}"
+								th:value="${analiseQualitativa.descricao}"
+								class="js-tooltip js-tooltip  js-exclusao-btn" title="TESTE"
+								th:text="${analiseQualitativa.descricao}"></option>
+						</select>
+			</div>
+			
+			<div class="col-sm-6  form-group  bw-required">
+						<label for="ferramentas" class="control-label">Ferramentas utilizadas para gestão do projeto?</label> <select id="ferramentas"
+							class="form-control selectpicker" data-style="btn-primary"
+							th:field="*{ferramentas}">
+							<option value="">Selecione</option>
+							<option th:each="ferramentas : ${ferramentasLista}"
+								th:value="${ferramentas.descricao}"
+								
+								class="js-tooltip js-tooltip  js-exclusao-btn" title="TESTE"
+								th:text="${ferramentas.descricao}"></option>
+						</select>
+			</div>
+			
+			
+			
+			
+			
+		</div>
+		
+		<div class="row">
+				<div class="col-sm-3  form-group  bw-required">
+						<label for="problemas" class="control-label"> Problemas </label> <select id="problemas" multiple="multiple"
+							class="form-control selectpicker" data-style="btn-primary"
+							th:field="*{problemas}">
+							<option value="">Selecione</option>
+							<option th:each="problemas : ${problemasLista}"
+								th:value="${problemas.descricao}"
+								
+								class="js-tooltip js-tooltip  js-exclusao-btn" title="TESTE"
+								th:text="${problemas.descricao}"></option>
+						</select>
+			</div>
+			
+			<div class="col-sm-9  form-group  bw-required">
+						<label for="solucoes" class="control-label"> Propostas de solução para os problemas encontrados </label> <select id="solucoes" multiple="multiple" 
+							class="form-control selectpicker" data-style="btn-primary"
+							th:field="*{solucoes}">
+							<option value="">Selecione</option>
+							<option th:each="solucoes : ${solucoesLista}"
+								th:value="${solucoes.descricao}"
+								class="js-tooltip js-tooltip  js-exclusao-btn" title="TESTE"
+								th:text="${solucoes.descricao}"></option>
+						</select>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-3  form-group" style="display: none;">
+				<label for="id">ID:</label> <input id="id" type="text" th:fiel="id"
+					th:value="*{id}" name="id" class="form-control" />
+			</div>
+
+		</div>
+
+
+
+		<div class="row">
+			<div class="form-group col-sm-6">
+				<button class="btn  btn-primary btn-lg" type="submit">Salvar
+					Projeto</button>
+
+				<a href="/projeto/novo" class="btn  btn-danger btn-lg">Novo
+					Projeto</a>
+
+
+			</div>
+
+		</div>
+
+
+
+
+		</form>
+		
+		</div>
+
+	</section>
+
+</body>
+
+
+
+
+
+</html>

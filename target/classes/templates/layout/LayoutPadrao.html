@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+	<meta charset="UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+	<title>SitCON</title>
+
+	<link rel="stylesheet" type="text/css" href="/layout/stylesheets/vendors.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/layout/stylesheets/brewer.css"/>
+	<link rel="stylesheet" type="text/css" href="/layout/stylesheets/algaworks.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/layout/stylesheets/application.css"/>
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+<div class="aw-layout-page">
+	<nav class="navbar  navbar-fixed-top  navbar-default  js-sticky-reference" id="main-navbar" >
+		<div class="container-fluid">
+
+	    <div class="navbar-header">
+	     	<a class="navbar-brand  hidden-xs" href="#">
+	        		<p>SITCon</p>
+	        	
+	      	</a>
+	      	
+	      	
+
+	      	<ul class="nav  navbar-nav">
+	      		
+	        	<li>
+	          		<a href="#" class="js-sidebar-toggle"><i class="fa  fa-bars"></i></a>
+	        	</li>
+	      	</ul>
+	      	
+	      	
+	      	
+	    </div>
+	 
+	    
+
+	    <ul class="nav navbar-nav  navbar-right">
+	    	<li>
+	        	<a href="/"><em class="fa  fa-sign-out"></em></a>
+	      	</li> 
+	    </ul>
+
+	  </div>
+	</nav>
+	
+	<aside class="aw-layout-sidebar  js-sidebar">
+		<div class="aw-layout-sidebar__content">
+
+	    	<nav class="aw-menu  js-menu">
+	      		<ul class="aw-menu__list">
+	
+	        		<li class="aw-menu__item">
+	          			<a href="/dashboard"><i class="fa  fa-fw  fa-home"></i><span>Dashboard</span></a>
+	        		</li>
+	        		
+	        		<li class="aw-menu__item  is-active">
+	          			<a href="#">
+	            			<i class="fa  fa-fw  fa-file-text"></i><span>Cadastros Básicos</span>
+	            			<i class="aw-menu__navigation-icon  fa"></i>
+	          			</a>
+	      
+	          			<ul class="aw-menu__list  aw-menu__list--sublist">
+				            <li class="aw-menu__item  aw-menu__item--link"><a href="/pdtic/novo">Carregar PDTIC</a></li>
+				            <li class="aw-menu__item  aw-menu__item--link  is-active"><a href="/legislacao/novo">Carregar Legislação</a></li>
+				            <li class="aw-menu__item  aw-menu__item--link  is-active"><a href="/pac/novo">Carregar PAC</a></li>
+				            
+	          			</ul>
+	        		</li>
+	
+	        		<li class="aw-menu__item  is-active">
+	          			<a href="#">
+	            			<i class="fa  fa-fw  fa-file-text"></i><span>Demanda</span>
+	            			<i class="aw-menu__navigation-icon  fa"></i>
+	          			</a>
+	      
+	          			<ul class="aw-menu__list  aw-menu__list--sublist">
+				            <li class="aw-menu__item  aw-menu__item--link"><a href="/demanda/novo">Cadastro de DOD</a></li>
+				            <li class="aw-menu__item  aw-menu__item--link  is-active"><a href="/demanda">Pesquisar DOD</a></li>
+				            
+	          			</ul>
+	        		</li>
+	        		
+	        		<li class="aw-menu__item  is-active">
+	          			<a href="#">
+	            			<i class="fa  fa-fw  fa-file-text"></i><span>Termo de Referência </span>
+	            			<i class="aw-menu__navigation-icon  fa"></i>
+	          			</a>
+	      
+	          			<ul class="aw-menu__list  aw-menu__list--sublist">
+				            <li class="aw-menu__item  aw-menu__item--link"><a href="/demanda/novo">Cadastro de DOD</a></li>
+				            <li class="aw-menu__item  aw-menu__item--link  is-active"><a href="/demanda">Pesquisar DOD</a></li>
+				            
+	          			</ul>
+	        		</li>
+	
+	        		
+	
+	      		</ul>
+	    	</nav>
+		</div>
+	</aside>
+	
+	<section class="aw-layout-content  js-content" layout:fragment="conteudo"></section>
+	
+	<!-- <footer class="aw-layout-footer  js-content">
+		<div class="container-fluid">
+			<span class="aw-footer-disclaimer">&copy; 2016 AlgaWorks. Todos os direitos reservados.</span>
+		</div>
+	</footer>-->
+</div>
+
+</body>
+<script src="/layout/javascripts/vendors.min.js"></script>
+<script src="/layout/javascripts/algaworks.min.js"></script>
+<script src="/layout/javascripts/Chart.min.js"></script>
+<script src="/layout/javascripts/dashboard.graficos.js"></script>
+<script>
+
+	$(document).on("click", ".remover-opcao-produto", function() {
+		$(this).parent().remove();
+	});
+	
+	function adicionarOpcaoProduto(id, nome) {
+		var opcaoProduto = '<li class="opcao-produto">';
+			opcaoProduto += '<input type="hidden" name="produto[]" value="'+id+'" />';
+			opcaoProduto += '<small class="opcao-produto-nome">'+nome+'</small>';
+			opcaoProduto += '<small class="remover-opcao-produto">X</small>';
+			opcaoProduto += '</li>';
+			$('.opcoes-produtos').append($(opcaoProduto));
+			selecionarProdutosOpcoes();
+	}
+	
+	function selecionarProdutosOpcoes() {
+		var produtos = [];
+		$(".opcao-produto [name='produto[]']").each(function(i, p) {
+			produtos.push($(p).val());
+		});
+		console.log(produtos);
+		$("#produtos").val(produtos.join(","));
+	}
+	
+	$("#select-produtos").change(function() {
+		var selecionado = $(this).find(":selected");
+		if (selecionado) {			
+			adicionarOpcaoProduto(selecionado.attr("value"), selecionado.text());
+		}
+		$(this).val("");
+	});
+	
+	
+	
+</script>
+</html>

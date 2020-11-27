@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="'layout/LayoutPadrao'">
+
+<head>
+
+</head>
+
+<body>
+	<section layout:fragment="conteudo">
+
+		<div class="page-header">
+			<div class="container-fluid">
+				<h1 style="font-size: 40px">Cadastro de Documento Oficial de
+					Demanda</h1>
+			</div>
+		</div>
+
+		<div class="container-fluid">
+		
+			<div class="row">
+				<div class="col-sm-6  form-group">
+					<label for="descricao" class="control-label">Responsável</label> <input
+						id="descricao" type="text" class="form-control" autocomplete="off"/>
+				</div>
+
+				<div class="col-sm-6 form-group">
+					<label for="setor">Setor Requisitante</label> <select id="setor"
+						class="form-control">
+						<option value="">Selecione o estilo</option>
+
+					</select>
+
+
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="form-group col-sm-12">
+					<label for="objetoContratacao">Objeto da Contratação</label>
+					<textarea class="form-control" id="objetoContratacao"
+						rows="3"></textarea>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-12  form-group" >
+					<label for="estilo" class="control-label">Objetivo Estratégico</label>
+					<div class="bw-field-action">
+						
+						<textarea class="form-control" id="objetoContratacao"
+						rows="1"></textarea>
+						
+						<div class="bw-field-action__icon">
+							<a href="#" data-toggle="modal" data-target="#modalCadastroRapidoEstilo">
+								<i class="glyphicon  glyphicon-plus-sign  bw-glyphicon-large"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-12  form-group" >
+					<label for="necessidade" class="control-label">Necessidade da Contratação</label>
+					<div class="bw-field-action">
+						
+						<textarea class="form-control" id="necessidade"
+						rows="1"></textarea>
+						
+						<div class="bw-field-action__icon">
+							<a href="#" data-toggle="modal" data-target="#modalCadastroRapidoEstilo">
+								<i class="glyphicon  glyphicon-plus-sign  bw-glyphicon-large"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="form-group">
+					<button class="btn  btn-primary" type="submit">Cadastar Documento</button>
+					<button class="btn  btn-danger" type="submit">Cancelar</button>
+				</div>
+
+			
+		</div>
+
+
+	</section>
+
+</body>
+
+
+
+
+
+</html>
