@@ -1,0 +1,1098 @@
+orgao;uasg;ano;numero;tipo;subtipo;codigo;descricao;descricaoDetalhada;
+026403;158142;2020;86;Solução de TIC;MATERIAIS DE TIC;150830;SOFTWARE;"Revit - Autocad (Renovação kit: 3 licenças)
+";
+026403;158142;2020;87;Solução de TIC;MATERIAIS DE TIC;150830;SOFTWARE;"Revit - Autocad (Ampliação kit: 3 licenças)
+";
+026403;158142;2020;88;Solução de TIC;MATERIAIS DE TIC;150830;SOFTWARE;TQS (Ampliação 1 licença);
+026403;158142;2020;89;Solução de TIC;MATERIAIS DE TIC;150830;SOFTWARE;"Volare - Orçamentação de Obras (Renovação kit: 2 licenças)
+";
+026403;158142;2020;632;Solução de TIC;MATERIAIS DE TIC;66338;COMPUTADOR;COMPUTADOR, NOME COMPUTADOR - TIPO 01 ;
+026403;158142;2020;633;Solução de TIC;MATERIAIS DE TIC;227249;COMPUTADOR;COMPUTADOR, TIPO 2;
+026403;158142;2020;634;Solução de TIC;MATERIAIS DE TIC;245588;SERVIDOR DE REDE;SERVIDOR DE REDE, PROCESSADOR 2.0 GHZ, MEMÓRIA CACHE 512 KB (L2), BARRAMENTO 133 MHZ, SLOTS 5 SLOTS PCI E SLOT DE MEMÓRIA DIMM, MEMÓRIA RAM SDRAM 512 MB COM EXPANSÃO ATÉ 4 GB, DISCO FLEXÍVEL 1.44 MB, DISCO RÍGIDO 40 GB IDE TX TRANSFERÊNCIA 80 MB - 5200 RPM, TAXA TRANSFERÊNCIA PLACA REDE 10/100 MBPS, GABINETE ATX, PADRÃO MONITOR SVGA, PADRÃO TECLADO PS/2, COMPATIBILIDADE MOUSE PS/2;
+026403;158142;2020;635;Solução de TIC;MATERIAIS DE TIC;243521;SWITCH;SWITCH, QUANTIDADE PORTAS 24 PORTAS, TIPO PORTAS 100 BASE-TX E 10 BASE-T EM RJ 45, VELOCIDADE PORTA 10MBPS E 100MBPS EM MODOS FULL E HALF DUPLEX, SUPORTE VLAN 3, ALIMENTAÇÃO 100/240, FREQUÊNCIA 50/60, CARACTERÍSTICAS ADICIONAIS PORTAS 10/100 AUTOSENSE RJ45, COMPATÍVEL COM PRO, APLICAÇÃO CONECTAR MICROCOMPUTADOR A REDE, SUPORTE VLAN;
+026403;158142;2020;636;Solução de TIC;MATERIAIS DE TIC;327378;SERVIDOR ARQUIVO;SERVIDOR ARQUIVO, TIPO NAS - NETWORK ATTACHED STORAGE, CAPACIDADE 2 TB, 4 GB, MEMÓRIA RAM 4 GB, PLACA REDE GIGABIT ETHERNET, DIMENSÕES 40 U;
+026403;158142;2020;637;Solução de TIC;MATERIAIS DE TIC;450148;FONTE ALIMENTAÇÃO ININTERRUPTA;FONTE ALIMENTAÇÃO ININTERRUPTA, TENSÃO ENTRADA 380/220, TENSÃO SAÍDA 380/220, TIPO ESTABILIZADOR INTERNO GERENCIADO POR MICROCONTROLADOR OU DSP, TIPO ALARME AUDIOVISUAL, AUTONOMIA BATERIA 60 MIN A MEIA CARGA, NÚMERO DE FASES TRIFÁSICO, POTÊNCIA SAÍDA 18, CAPACIDADE NOMINAL 20 KVA, CARACTERÍSTICAS ADICIONAIS 1 ON LINE SYSTEM, BYPASS ESTÁTICO E MANUAL;
+026403;158142;2020;638;Solução de TIC;MATERIAIS DE TIC;300956;ESTANTE RACK;ESTANTE RACK, TIPO DE PISO, PADRÃO 19 X 40U X 570 MM, ESTRUTURA AÇO, PORTAS LATERAIS E FUNDO REMOVÍVEIS COM ALERTAS VENTILAÇÃO, PORTA FRONTAL EM AÇO COM CHAVE E VISOR EM ACRÍLICO, COR BEGE, CARACTERÍSTICAS ADICIONAIS KIT RODAS COM TRAVAS/2 VENTILADORES 19/1 RÉGUA 8, BANDEJAS OITO 1U DUPLA FIXAÇÃO E UMA DESLIZANTE 19 X 500MM, TIPO FIXAÇÃO PORCA TIPO GAIOLA/PARAFUSO M-5 FIXAÇÃO EQUIPAMENTO, ACABAMENTO SUPERFICIAL PINTURA EPÓXI TEXTURIZADA, APLICAÇÃO COMPOSIÇÃO AMBIENTE TRABALHO;
+026403;158142;2020;639;Solução de TIC;MATERIAIS DE TIC;98205;MICROCOMPUTADOR PESSOAL TIPO LAPTOP;MICROCOMPUTADOR PESSOAL TIPO LAPTOP, NOME MICROCOMPUTADOR PESSOAL TIPO LAPTOP;
+026403;158142;2020;640;Solução de TIC;SERVIÇOS DE TIC;27324;SERVICOS DE PESQUISA, ANALISE E DESENVOLVIMENTO EM TECNOLOGIA DA INFORMACAO E COMUNICACAO (TIC);Manutenção corretiva e evolutiva dos sistemas integrados de Gestão existentes na instituição. ;
+026403;158142;2020;641;Solução de TIC;SERVIÇOS DE TIC;14958;INFORMATICA - INTERNET;Contratação de Link de Internet para prover estabilidade nos acessos aos sistemas do IFAM. ;
+026403;158142;2020;656;Solução de TIC;SERVIÇOS DE TIC;150513;SCANNER;SCANNER, NOME SCANNER;
+026403;158142;2020;657;Solução de TIC;SERVIÇOS DE TIC;13218;IMPRESSORA LASER;IMPRESSORA LASER, NOME IMPRESSORA - LASER;
+026403;158142;2020;978;Solução de TIC;MATERIAIS DE TIC;131903;SERVIDOR DE REDE;"Processador:Intel Xeon Silver 4215 2.5G, 8C/16T, 9.6GT/s, 11M Cache, Turbo, HT (85W) DDR4-2400;
+Memoria:16 GB RDIMM de 2666 MT/s;
+Config. RAID: RAID 5 (necessário discos rígidos com as mesmas características - mínimo de 3 discos);
+Controladora RAID: Placa de controle PERC H330 perfil baixo;
+Armazenamento: 6 x 600GB 10K RPM SAS 12Gbps 512n 2.5in Hot-plug Hard Drive, 3.5in HYB CARR
+placa de rede: Placa de interface de rede Broadcom 5719 de 4 portas, 1 Gbit, compacta
+Gerenciamento de Sistemas Integrado: iDRAC9 Enterprise com gerenciamento de configurações do servidor OME;
+Drive Óptico Interno: DVD+/-RW, SATA, interna;
+Trilhos de rack: Trilhos estáticos ReadyRails™ para racks de 2/4 hastes;
+Cabo de aliemntação: 2 x Cabo de alimentação, C13, BR14136, 6 pés (1,8 metro), 250 V, 10 A, para Brasil
+Fonte de Alimentação: Dual, Hot-plug, Redundant Power Supply (1+1), 495W
+Sistema Operacional: Windows Server® 2019 Standard,16CORE,FI,No Med,No CAL, Multi Language
+Licenças Para Acesso de Cliente (CALs): 1 Licença de acesso do cliente do Windows Server 2019/2016 - CALs de USUÁRIO (Standard ou Datacenter)
+Virtualização: Função Hyper-V ativada com sistema operacional STD ou DC Ed pré-instalado em HDD virtual incluída;";
+026403;158142;2020;979;Solução de TIC;MATERIAIS DE TIC;122971;SWITCH;"Portas de comutação 10/100/1000Base-T Gigabit Ethernet com sensor automático: 24
+Portas de fibra SFP/SFP+: 2 SFP
+Redução de energia para cabos curtos ou conexões inativas: padrão
+Negociação automática de velocidade, modo duplex e controle de fluxo: padrão
+Modo MDI/MDIX automático e controle de fluxo: padrão
+Cabo de alimentação, 250 V, 2 M, C13 para NBR 14136, Brasil
+Dimensões (A x L x P): 1,62 x 8,23 x 9,84 polegadas (41,25 x 209,0 x 250,0 mm)
+
+Montagem em rack: 1/2 RU de largura
+
+Peso da unidade: 1,88 Kg
+
+Ventiladores: Design sem ventiladores
+
+Fonte de alimentação: 40 W
+
+Energia (máx.): 17,5 W
+
+Energia: BTU/h: 59,8";
+026403;158142;2020;980;Solução de TIC;MATERIAIS DE TIC;122971;SWITCH;"24 portas de 1 GbE e 2 portas SFP de 1 GbE;
+Portas de comutação 10/100/1000Base-T Gigabit Ethernet com sensor automático: 24
+Portas de fibra SFP/SFP+: 2 SFP
+Portas Power over Ethernet (PoE): sim
+Alimentação por PoE: sim
+Redução de energia para cabos curtos ou conexões inativas: padrão
+Negociação automática de velocidade, modo duplex e controle de fluxo: padrão
+Modo MDI/MDIX automático e controle de fluxo: padrão";
+026403;158142;2020;981;Solução de TIC;MATERIAIS DE TIC;357888;ROTEADOR RÁDIO;"Banda de frequência: Dualband (2.4 GHz / 5 GHz)
+Velocidade: 867 Mbps
+Gerenciamento: Controlado
+Protocolo de Ligação de Dados: 802.11a/g/n/ac
+Antenas:	03 x 4 dBi de 2.4 GHz ou 03 x 4 dBi de 5 GHz
+Portas: 10/100/1000BASE-T autosensing (RJ-45); porta de gerenciamento do console (RJ45)
+Voltagem	100V / 240V / Bivolt
+
+ADICIONAIS FUNÇÕES: ACESSO POINT, ROUTER, CLIENTE E BRIDGE";
+026403;158142;2020;982;Solução de TIC;MATERIAIS DE TIC;150648;PEÇA/COMPONENTE FONTE ALIMENTAÇÃO ININTERRUPTA;"Aplicação: Access Point
+Alimentação: 110v/220v
+Voltagem: 48V
+Corrente: 380mA
+Acessórios: 1 cabo de alimentação
+Medidas embalagem (L/A/P): 220 / 50 / 160 mm
+Pesos Bruto/Líquido: 0.40 kg
+Garantia: 90 dias";
+026403;158142;2020;983;Solução de TIC;MATERIAIS DE TIC;127906;IMPRESSORA MULTIFUNCIONAL;"IMPRESSORA MULTIFUNCIONAL, 
+COLORIDA
+Funções 
+- Imprimir, copiar, digitalizar, enviar fax 
+Impressão 
+- Velocidade de impressão preta: Normal: até 19 ppm / Cor da velocidade de impressão: Normal: até 4 ppm 
+- Saída da primeira página (pronta): Preto: tão rápido quanto 14 seg / cor: tão rápido quanto 26 seg 
+- Saída da primeira página (pronta): Preto: tão rápido quanto 14 seg / cor: tão rápido quanto 26 seg 
+- Ciclo de trabalho (mensal, A4): Até 20.000 páginas 
+- Tecnologia de impressão: Laser 
+- Qualidade de impressão: Até 2.400 x 600 dpi 
+- Tecnologias de resolução de impressão: ReCP 
+- Exibição: LCD de 2 linhas 
+- Velocidade do processador: 800 MHz 
+- Gerenciamento de segurança: Servidor da Web incorporado: proteção por senha, Rede: ativar / desativar portas e recursos da rede, alteração de senha da comunidade SNMPv1 e SNMPv2, SNMPv3; Filtragem de endereços IP / MAC (IPv4 / IPv6 / MAC); IPSec; autenticação via WEP, WPA / WPA2 Pessoal; criptografia via AES ou TKIP 
+- Cartuchos de substituição: Cartucho de Toner Preto Padrão (~ 1.500 páginas) CLT-K404S, Cartucho de Toner Padrão Cyan (~ 1.000 páginas) CLT-C404S, Cartucho de Toner Amarelo Padrão (~ 1.000 páginas) CLT-Y404S, Cartucho de Toner Magenta Padrão (~ 1.000 páginas) CLT-M404S 
+
+Scanner 
+- Tipo de scanner: Mesa, ADF 
+- Digitalizar o formato de arquivo: PDF, JPG, TIFF 
+- Resolução de digitalização ótica: Até 1.200 dpi 
+- Tamanho de digitalização, no máximo: 216 x 297 mm 
+- Tamanho de digitalização, no máximo: 8,5 x 11,7 pol 
+- Tamanho de digitalização (ADF), mínimo: 145 x 145 mm 
+- Tamanho de digitalização (ADF), mínimo: 5,7 x 5,7 in 
+- Velocidade de digitalização (normal, A4): Até 18 ppm (preto), até 18 ppm (cor) 
+- Capacidade do alimentador automático de documentos: Standard, 40 folhas 
+- Recursos padrão de envio digital: Digitalizar para e-mail, Digitalizar para USB, Digitalizar para WSD, WSD Scan 
+- Digitalizar para PC: PC Scan 
+
+Cópia 
+- Velocidade de cópia (normal): Preto: até 19 cpm / Cor: até 4 cpm 
+- Resolução de cópia (texto em preto): Até 600 x 600 dpi 
+- Resolução de cópia (texto e gráficos coloridos): Até 600 x 600 dpi 
+- Copiar reduzir / ampliar configurações: 25 a 400% 
+- Cópias, no máximo: Até 999 cópias 
+
+Fax 
+- Velocidade de transmissão de fax: 3 seg por página 
+
+";
+026403;158142;2020;984;Solução de TIC;MATERIAIS DE TIC;274366;IMPRESSORA MULTIFUNCIONAL;"IMPRESSORA MULTIFUNCIONAL, 
+Consumo Aproximado de Energia: Acima de 2 kw/h 
+
+Capacidade da Bandeja: 250 Folha(s)
+
+Capacidade de Saída de Papel: 50 Página(s)
+
+Tamanho de Papel Suportado: Carta, legal, folio, A4, ofício, B5, executivo, A5, envelopes, etiquetas, cartolina 
+
+Tipo de Impressora: Laser 
+
+Cor da Impressão: Monocromático 
+
+Tipo de Mídia Suportada:
+
+Normal 
+
+Envelopes 
+
+Memória: 125 Megabytes
+
+Conectividade:
+
+USB 
+
+Wireless 
+
+NFC 
+
+Cópias por Minuto: 28 
+
+Funções da Multifuncional:
+
+Imprime 
+
+Digitaliza 
+
+Copia 
+
+Requisitos do Sistema Operacional: Windows 8 / 7 / Vista / XP / 2008R2 / 2008 / 2003, Mac OS X 10.5 - 10.10, Variados Linux/Unix 
+
+Resolução da Digitalização: 1200 x 600 dpi 
+
+Resolução de Impressão Preto e Branco: 1200 x 1200 dpi 
+
+Sistema de Impressão: Preto 
+
+Suprimentos Compatíveis: MLT-D116S (1200 PGS) / MLT-D116L (3000 PGS) 
+
+Velocidade de Impressão em Preto e Branco (por Minuto): 28ppm 
+
+Resolução Máxima de Impressão: 1200 x 1200 Dpi";
+026403;158142;2020;985;Solução de TIC;MATERIAIS DE TIC;150347;DISCO RÍGIDO REMOVÍVEL;"Nome Completo: HD 600GB SAS 6G Enterprise 10K SFF (2.5in) HDD
+
+Categoria: Enterprise (10K rpm)
+
+Form Factor: SFF (2,5”)
+
+Carrier (Gaveta): Standard Carrier (ST)
+
+Velocidade de rotação: 10000 rpm (10K)
+
+Interface: SAS
+
+Taxa de Transferência Síncrona: 6 Gb/sec
+
+Bytes/Setor: 512
+
+Capacidade: 600,127MB
+
+Blocos Lógicos: 1,172,123,568
+
+Tempo de busca em trilha única: 0.3 ms
+
+Tempo de busca Average: 4.0 ms
+
+Tempo de busca para Curso Completo: 8.0 ms
+
+Temperatura de Operação: 10° até 35° C (50° até 95° F)
+
+Altura: 15,6 mm (0,62 polegadas)
+
+Largura: 75,7 mm (2.98 polegadas)
+
+Profundidade: 118,7 mm (4.67 polegadas)
+
+Part Number do Fabricante: 652583-B21
+
+Part Number Sobressalente (Spare):652583-B21
+
+Part Number de Montagem (Assembly): 597609-003
+641552-003
+666355-003
+693569-003
+689287-003
+599476-003
+619286-003
+
+
+HP Model Number: 
+EG0600FBLSH 
+Dual-Port SAS
+EG0600FBDSR
+Dual-Port SAS
+EG0600FCSPL
+EG0600FCVBK
+EG0600FCHHU
+Dual-Port SAS
+EG0600FBVFP
+Dual-Port SAS
+EG0600FBDBU
+Dual-Port SAS
+
+
+P/N : N/A
+
+Firmware:  N/A";
+026403;158142;2020;986;Solução de TIC;MATERIAIS DE TIC;150347;DISCO RÍGIDO REMOVÍVEL;"DISCO TIPO SATA
+Especificações:
+
+- Interface: SATA 6.0Gb / s
+
+- Capacidade: 8TB
+
+- RPM: 7200RPM
+
+- Cache: 256MB
+
+ 
+
+Dimensões:
+
+- Fator de forma: 3,5
+
+- Altura: 26,11mm
+
+- Largura: 101,60mm
+
+- Comprimento: 146,99mm
+
+ 
+
+Aplicações de melhor ajuste:
+
+- 1 anexado à rede de 8 compartimentos de armazenamento (NAS) 
+
+- Desktop RAID e servidores 
+
+- Armazenamento do servidor Multimedia 
+
+- Nuvem privada
+
+ 
+
+Conteúdo da embalagem:
+
+- 01 HD 
+
+
+Garantia
+1 ano de garantia
+(9 meses de garantia contratual junto ao fabricante + 3 meses referentes à garantia legal, nos termos do artigo 26, II, do Código de Defesa do Consumidor)
+
+
+Peso
+770 gramas (bruto com embalagem)
+";
+026403;158142;2020;987;Solução de TIC;MATERIAIS DE TIC;235378;SERVIDOR ARQUIVO;"STORAGE:
+Especificações:
+
+ 
+
+Interface:
+
+- Gigabit Ethernet
+
+- Fonte de alimentação (entrada DC) x 1
+
+- Porta de expansão USB 3.0 x 2 traseira
+
+ 
+
+CPU:
+
+- Marvell ARMADA 385 1.3 GHz dual-core
+
+ 
+
+Memória:
+
+- 1 GB DDR3
+
+
+
+Compartimentos de unidade:
+
+- 2 x 3,5 polegadas baías de disco rígido, hot swap capaz, sem bandeja de design
+
+ 
+
+Discos rígidos internos:
+
+- Discos rígidos WD Red NAS
+
+ 
+
+Portas de Expansão:
+
+- 2 portas USB 3.0
+
+ 
+
+Requisitos de sistema:
+
+- Sistema operacional Windows 10, Windows 8 ou Windows 7
+
+- Sistemas operacionais Mac OS X El Capitan, Yosemite, Mavericks, Lion de montanha ou Leão
+
+- Dispositivos DLNA / UPnP para streaming
+
+- Roteador com ligação à Internet
+
+ 
+
+Navegadores Web Suportados:
+
+- Internet Explorer 10 ou superior
+
+- Safari 6 ou superior
+
+- Firefox 30 ou superior
+
+- Google Chrome 31 ou superior em plataformas Windows e Mac OS suportadas
+
+ 
+
+Protocolos de rede:
+
+- Cliente DHCP ou IP Estático
+
+- Cliente NTP
+
+- Dynamic DNS (DDNS)
+
+- Apple Bonjour e Windows Rally
+
+- Suporte de quadro Jumbo até 9K
+
+- VLAN (802.1Q)
+
+- Agregação de link e failover para 2 portas Gigabit Ethernet
+
+- Encaminhamento de porta UPnP
+
+- Protocolo de Descoberta de Topologia de Camada de Link LLTD
+
+- ISCSI
+
+- SSH
+
+ 
+
+Serviços de Arquivos de Rede:
+
+- Suportes de SO
+
+- Windows XP Home / Pro / SP3 de 64 bits +
+
+- Windows Vista / 7/8 (Todas as versões)
+
+- Mac OS X 10.6, Leão, Leão de montanha
+
+- CIFS / SMB para Windows, Mac OS X e Linux
+
+- Sistema de Arquivos Distribuídos do Linux (DFS)
+
+- AFP para Mac OS X
+
+- Servidor FTP / SFTP
+
+- Servidor WebDAV
+
+- Suporte do Microsoft Active Directory
+
+ 
+
+Gerenciamento de backup:
+
+- Backups remotos: My Cloud Expert Series para My Cloud Expert Series localmente ou remotamente
+
+- Backup de arquivos internos ou pastas do dispositivo para outros arquivos / pastas no NAS ou unidade USB conectada
+
+- Clientes WD SmartWare Pro para Windows
+
+- Suporte do Apple Time Machine (10.5.8+)
+
+- Serviços de backup baseados em nuvem
+
+- Amazon S3
+
+- ElephantDrive
+
+- Gerenciamento de sincronização de disco para as portas USB conectadas
+
+ 
+
+Gerenciamento de Disco:
+
+- RAID: JBOD, spanning, 0/1
+
+- Migração RAID
+
+- JBOD para RAID 1
+
+- Troca a Quente
+
+- Roaming de disco
+
+- Array roaming
+
+ 
+
+Segurança:
+
+- Criptografia de volume (256 bit AES)
+
+ 
+
+Sistema de arquivo:
+
+- EXT4 para HDD interno
+
+- Suporte aos seguintes formatos para unidades USB conectadas externamente
+
+- FAT / FAT32
+
+- NTFS (capacidade de leitura e gravação)
+
+- HFS + J (sensível a maiúsculas e minúsculas)
+
+- Linux EXT2, EXT3, EXT4
+
+- Suporte para montagem ISO-Image
+
+ 
+
+Servidor FTP:
+
+- Configuração da porta de suporte
+
+- Definir intervalo de portas de FTP passivo
+
+- Opção para relatar o IP externo no modo PASV
+
+- Seleção de idioma do cliente
+
+- FTP anônimo
+
+- Suporte FTP seguro
+
+- Protocolo de eXchange de arquivo de suporte (FXP)
+
+- Restrição de largura de banda FTP (upstream / downstream)
+
+- Bloqueio de endereço IP (bloquear acesso a partir de um endereço IP indesejado)
+
+ 
+
+Gerenciamento de downloads:
+
+- Downloads HTTP de um URL para uma pasta especificada pelo usuário no NAS
+
+- FTP downloads de arquivos ou pastas de um servidor FTP para outros arquivos / pastas no NAS
+
+- Gerenciador de download P2P
+
+ 
+
+Gerenciamento de energia:
+
+- Drive Spin Up / Down (incluindo unidades WD conectadas USB)
+
+- Recuperação automática de energia (com UPS)
+
+- Programar energia ligada / desligada
+
+- Parada graciosa na bateria baixa da UPS
+
+- Controle do ventilador
+
+- UPS de rede
+
+- Acordar na LAN
+
+ 
+
+Acesso remoto:
+
+- Aplicativo para celular Minha nuvem
+
+- Acesso à web do My Cloud.com
+
+ 
+
+Gerenciamento de usuários / grupos:
+
+- Número Máximo de Usuários: 512 para Samba, 800 para ADS
+
+- Número máximo de grupos de usuários: 64 para Samba, 200 para ADS
+
+- Número máximo de compartilhamentos da rede: Número máximo de compartilhamentos da rede: 128
+
+- Máximo de conexões CIFS simultâneas: 10
+
+- Atribuição de usuário / grupo para compartilhamento de rede / FTP
+
+- Cotas para grupos ou usuários
+
+- Atribuição de usuários a vários grupos
+
+- Atribuição em lote de usuários a grupos
+
+- Criação de usuários em lote
+
+- Importando usuários (Formato Delimitado CSV)
+
+- Importando grupos (formato delimitado por CSV)
+
+ 
+
+Administração de sistema:
+
+- Estado do sistema: Informações do dispositivo
+
+- Status de uso da capacidade para o armazenamento externo
+
+- Divisão da categoria de arquivos de quanto vídeo, foto, música é armazenada
+
+- Notificações de alerta
+
+- Mensagem de UI de evento
+
+- Alerta da interface do usuário (com reconhecimento de mensagem obrigatório)
+
+- Notificação por e-mail
+
+- Mensagem pop-up do QuickView
+
+- Estado do LED VERMELHO
+
+- Reciclagem da rede
+
+- Suporte Windows CIFS
+
+- Suporte Apple AFP
+
+- Sistema / FTP Log (Cliente Syslog)
+
+- Interface de administração HTTP / S (Web) (HTTP Server)
+
+- Atualização do firmware
+
+- Backup e restauração de configuração
+
+- SNMPv2
+
+- Informação do sistema
+
+- Porcentagem da CPU
+
+- Uso de RAM
+
+- Desempenho da rede em MB/s
+
+ 
+
+Media Streaming:
+
+- Aplicativo de mídia PLEX
+
+- Servidor de mídia UPnP AV (Twonky)
+
+- Certificação DLNA
+
+- Suporta WD TV, WD TV Live, Xbox 360, PlayStation 3, Windows 8, TVs conectadas, players Blu-ray e molduras digitais
+
+- Servidor iTunes
+
+ 
+
+ISCSI:
+
+- ISCSI Target
+
+- Autenticação CHAP
+
+- ISNS (Serviço de Nome de Armazenamento na Internet)
+
+- Até 64 destinos iSCSI
+
+- Virtualização de Volume
+
+- Unidade de disco virtual (via iSCSI Initiator)
+
+- O número máximo de unidades de disco virtual suportadas é oito (8)
+
+ 
+
+Fonte de energia:
+
+- Tensão de entrada: 100V a 240V AC
+
+- Frequência de entrada: 50 a 60 Hz
+
+- Tensão de saída: 12V DC, até 4A
+
+ 
+
+Temperatura:
+
+- Temperatura de operação: 0 ° C a 35 ° C (32 ° F a 95 ° F)
+
+- Temperatura não operacional: -40 ° C a 70 ° C (-40 ° F a 158 ° F)
+
+";
+026403;158142;2020;988;Solução de TIC;MATERIAIS DE TIC;150347;DISCO RÍGIDO REMOVÍVEL;"TIPO SATA 64MB cache
+Especificações:
+
+ 
+
+Interface: 
+
+- SATA de 6 Gb/s
+
+ 
+
+Desempenho:
+
+- Velocidade de rotação: IntelliPower
+
+- Cache: 64 MB
+
+- MTBF: 1.000.000 horas
+
+ 
+
+Taxa de transferência:
+
+- Buffer para host (Serial ATA): 6 Gb/s (máx.)
+
+ 
+
+Estrutura:
+
+- Capacidade formatada: 4.000.787 MB
+
+- Capacidade: 4 TB
+
+- Tamanho físico: 3,5
+
+- Setor por unidade: 7,814,037,168 
+
+- Dimensões (A x P x L): 26,1 x 147 x 101,6 mm
+
+ 
+
+Choque:
+
+- Choque operacional (leitura): 65G, 2 ms
+
+- Choque não operacional: 250G, 2ms
+
+ 
+
+Acústica:
+
+- Modo Idle: 25 dBA (média)
+
+- Modo de busca 0: 28 dBA (média) 
+
+ 
+
+Temperatura:
+
+- Em operação: -0° C a 70° C
+
+- Fora de operação: -40° C a 70° C
+
+ 
+
+Umidade:
+
+- Em operação: 5 a 95% UR não condensado
+
+ 
+
+Sistema operacional compatível:
+
+- Windows / Mac / Linux 
+
+ 
+
+Informações Adicionais:
+
+ 
+
+Exclusiva tecnologia NASware 2.0:
+
+- Nossa tecnologia exclusiva, o NASware 2.0, faz com que o WD Red tenha um ótimo desempenho mesmo em um ambiente de NAS pequeno e exigente.
+
+- Ao adicionar o WD Red ao sistema NAS, tudo fica mais eficiente e confiável, e você obtém uma experiência de NAS REDvolutionary.
+
+ 
+
+3D Active Balance Plus:
+
+- Nossa tecnologia de controle ampliado de balanceamento em dois planos melhora significativamente o desempenho e a confiabilidade geral da unidade.
+
+- Os discos rígidos que não estão balanceados corretamente podem provocar vibração e ruído excessivos em um sistema com vários drives, reduzir a vida útil do HD e rebaixar o desempenho ao longo do tempo. 
+
+ 
+
+A escolha certa:
+
+- A escolha certa de NAS, pois nenhuma outra unidade é projetada especificamente para sistemas NAS residenciais e de pequenos escritórios e PCs com RAID. 
+
+ 
+
+Mais confiabilidade:
+
+- Como seu sistema NAS se mantém sempre conectado, é essencial contar com uma unidade altamente confiável.
+
+- Com uma melhoria de 35% no período médio entre falhas em comparação às unidades de desktop padrão, o WD Red com NASware 2.0 foi projetado e fabricado para ser uma solução mais robusta e confiável. 
+
+ 
+
+Compatibilidade para NAS:
+
+- O NASware 2.0, a tecnologia avançada de firmware incorporada a todas as unidades WD Red, promove integração sem problemas, proteção robusta de dados e desempenho otimizado para sistemas funcionando em ambientes NAS e RAID. 
+
+ 
+
+O segredo é a tecnologia de nova geração:
+
+- A tecnologia NASware 2.0 de nova geração da WD aprimora o desempenho de armazenamento de NAS ao diminuir as preocupações comuns com discos rígidos em sistemas NAS. Isso abrange preocupações com integração, compatibilidade, capacidade de atualização, confiabilidade e custo de propriedade, que são observadas com um disco rígido projetado para desktops. 
+
+ 
+
+Economia de dinheiro e energia:
+
+- Mantemos baixo o consumo de energia para manter feliz seu sistema NAS e também sua carteira. 
+
+ 
+
+Temperaturas de operação reduzidas:
+
+- Reduza sua conta de eletricidade e pegada de carbono com as unidades WD Red. A tecnologia inovadora reduz o consumo de energia e a temperatura operacional, resultando em uma solução mais confiável e econômica para ambientes NAS constantemente conectados. 
+
+ 
+
+Ideal para:
+
+- Projetado e testado especificamente para pequenas empresas e escritórios residenciais, sistemas NAS de 1 a 5 compartimentos e PCs com RAID.  ";
+026403;158142;2020;989;Solução de TIC;MATERIAIS DE TIC;150347;DISCO RÍGIDO REMOVÍVEL;"
+
+DISCO TIPO SAS
+Nome Completo: HPE HD 600GB SAS 6G Enterprise 10K SFF (2.5in) HDD
+
+Categoria: Enterprise (10K rpm)
+
+Form Factor: SFF (2,5”)
+
+Carrier (Gaveta): Standard Carrier (ST)
+
+Velocidade de rotação: 10000 rpm (10K)
+
+Interface: SAS
+
+Taxa de Transferência Síncrona: 6 Gb/sec
+
+Bytes/Setor: 512
+
+Capacidade: 600,127MB
+
+Blocos Lógicos: 1,172,123,568
+
+Tempo de busca em trilha única: 0.3 ms
+
+Tempo de busca Average: 4.0 ms
+
+Tempo de busca para Curso Completo: 8.0 ms
+
+Temperatura de Operação: 10° até 35° C (50° até 95° F)
+
+Altura: 15,6 mm (0,62 polegadas)
+
+Largura: 75,7 mm (2.98 polegadas)
+
+Profundidade: 118,7 mm (4.67 polegadas)
+
+Part Number do Fabricante: 652583-B21
+
+Part Number Sobressalente (Spare):652583-B21
+
+Part Number de Montagem (Assembly): 597609-003
+641552-003
+666355-003
+693569-003
+689287-003
+599476-003
+619286-003
+
+
+HP Model Number: 
+EG0600FBLSH 
+Dual-Port SAS
+EG0600FBDSR
+Dual-Port SAS
+EG0600FCSPL
+EG0600FCVBK
+EG0600FCHHU
+Dual-Port SAS
+EG0600FBVFP
+Dual-Port SAS
+EG0600FBDBU
+Dual-Port SAS
+
+
+P/N : N/A
+
+Firmware:  N/A";
+026403;158142;2020;990;Solução de TIC;MATERIAIS DE TIC;150347;DISCO RÍGIDO REMOVÍVEL;"DISCO TIPO SATA
+
+Especificações:
+
+- Interface: SATA 6 Gb/s
+
+- Capacidade: 2TB
+
+- Advanced Format (AF)
+
+- Fator de forma: 3.5-inch
+
+- RoHS compliant
+
+ 
+
+Performance:
+
+- Taxa de transferência de dados (máx): Host de/para unidade (sustentada): 147 MB/s
+
+- Cache: 64
+
+- Velocidade de rotação: 5400 RPM Class
+
+ 
+
+Dados:
+
+- Ciclos de carga / descarga: 300,000
+
+- Erros de leitura não recuperáveis ??por bits lidos: <1 in 10
+
+
+
+Gestão de Energia:
+
+- 12VDC ± 10% (A, pico): 1.73
+
+ 
+
+Requisitos de potência média:
+
+- Leitura/Escrita: 4.1 W
+
+- Inativo: 3.0 W
+
+- Standby/Sleep: 0.4W
+
+ 
+
+Ambiente:
+
+- Temperatura de operação: 0 até 60
+
+- Temperatura não operacional: -40 até 70
+
+ 
+
+Shock (Gs):
+
+- Operação (2 ms, escrita): 30
+
+- Operação (2 ms, leitura): 65
+
+- Não operacional (2ms): 250
+
+ 
+
+Acústica (dBA):
+
+- Inativo: 23
+
+- Seek (média): 27";
+026403;158142;2020;991;Solução de TIC;SERVIÇOS DE TIC;26620;OUTSOURCING DE  IMPRESSAO - PAGINAS A4 - POLICROMATICO - DENTRO DA FRANQUIA COM PAPEL;O outsourcing de impressão é a locação de impressoras, scanners, multifuncionais e outros equipamentos relacionados à impressão. Pode ser implantado em pequenas, médias e grandes empresas, além de escritórios, instituições de ensino e até em hospitais;
+026403;158142;2020;992;Solução de TIC;SERVIÇOS DE TIC;27022;OUTROS SERVICOS DE  GERENCIAMENTO DE INFRAESTRUTURA DE TECNOLOGIA DA INFORMACAO E COMUNICACAO (TIC);serviço de ampliação/manutenção da rede lógica da reitoria;
+026403;158142;2020;993;Solução de TIC;SERVIÇOS DE TIC;19984;ATENDIMENTO TECNICO - USUARIO;contratação de 1 posto de atendimento help desk.;
+026403;158142;2020;994;Solução de TIC;MATERIAIS DE TIC;66338;COMPUTADOR;"COMPUTADOR, TIPO 1
+Intel Core i7-8700
+Linux Ubuntu
+
+16GB (2x8GB) (MEMORIA)
+
+HD 1TB 7200 RPM
+
+Porta VGA, HDMI e DisplayPort
+
+Leitor de Cartão
+
+Sensor de Intrusão
+
+WiFi Qualcomm 802.11 AC
+
+Teclado l USB KB216
+
+Mouse USB MS116
+
+DVD-RW
+
+Fonte Platinum
+
+Monitor 23” 
+ProSupport 48 meses";
+026403;158142;2020;995;Solução de TIC;MATERIAIS DE TIC;66338;COMPUTADOR;"COMPUTADOR, TIPO 2
+
+Optiplex 3060 Small Form Factor
+
+Intel Core i3-8100
+
+Linux Ubuntu
+
+ 
+
+8GB (1x8GB) (MEMORIA)
+
+HD 500 GB 7200 RPM
+
+Porta VGA, HDMI e DisplayPort
+
+Leitor de Cartão
+
+Sensor de Intrusão
+
+WiFi Qualcomm 802.11 AC
+
+Teclado  USB KB216
+
+Mouse  USB MS116
+
+DVD-RW
+
+Fonte Platinum
+
+Monitor 21.5” 
+
+ProSupport 48 meses";
+026403;158142;2020;996;Solução de TIC;MATERIAIS DE TIC;98191;MICROCOMPUTADOR PESSOAL NOTEBOOK;"MICROCOMPUTADOR PESSOAL NOTEBOOK, 
+MICROCOMPUTADOR NOTEBOOK TIPO IV 
+
+PROCESSADOR: PROCESSADOR DE 7ª GERAÇÃO EM ARQUITETURA X86 (OU DE 8ª GERAÇÃO DA MESMA LINHA DO PROCESSADOR DA GERAÇÃO ANT ERIOR), E CACHE DE NO MÍNIMO 3MB;
+MEMORIA: 16GB DE MEMÓRIA RAM DUAL CHANNEL, DDR4;
+ DISCO RIGIDO: 256GB DE ARMAZENAMENTO SSD + DISCO RIGIDO DE 1 TB, 5400 RPM;
+ TELA: LED FULL HD, 15.6'', RETROILUMINADA;
+ TECLADO: RETRO ILUMINADA EM PORTUGUES OU INGLES;
+ PLACA MÃE: COM PLACA DE SOM HD, REDE WIRELESS PADRAO 802.11.b/g, BLUETOOTH 4.0 (2.4 GHz,1X1), REDE ETHERNET (10/100) TODAS INTREGADAS (ONBOARD);
+ PLACA DE VIDEO: NVIDIA GETFORFE GTX 940MX AOU 1050Ti COM GDDR DE 4 GB;
+ TOUCHPAD: com multitoque preciso, ativado por gesntos com rolagem intregada;
+ BATERIA : 4 CELULAS DE 40Wh (REMOVIVÉL)
+ CAMERA: WIDESCREEN HD (720p) INTREGADA;
+ ALIMENTAÇÃO EXTERNA: BIVOLT,ACOMPANHA CABO DE ALIMENTAÇÃO
+ PORTA ETERNET RJ45 (10/100);
+ 1 ENTRADA HDMI 1.4a;
+ INTERFACES: DUAS PORTAS USB 3.0 (ATÉ 5 GBPS);
+ UMA PORTA THUNDERBOLT 2 OU SUPERIOR;
+ SLOT DE CARTÃO SDXC;
+ AUDIO: CAIXAS DE SOM ESTÉREO;
+ DOIS MICROFONES;
+ PORTA PARA FONES DE OUVIDO;";
+026403;158142;2020;997;Solução de TIC;MATERIAIS DE TIC;286749;CAIXA PROTETORA EQUIPAMENTO ELETRÔNICO;"Rack 19 Soldado Piso Fechado Servidor 44u x 970mm
+
+Especificações
+
+    Estrutura soldada em aço SAE 1020 1,5mm de esp.
+    Porta frontal embutida, armação em aço 1,5mm de esp., com visor em fumê 2,0mm de esp., com fechadura escamoteável .
+    04 pés niveladores (aço polipropileno)confeccionados em aço (1/2?).
+    04 pés niveladores (aço polipropileno)confeccionados em aço (1/2?).
+    Laterais e Fundos removíveis 0,75mm de esp. com aletas de ventilação e fecho rápido.
+    Teto chanfrado (angulado) ate 770 mm  0,9mm de esp. e após 1,2 mm  com abertura para 02 ou 04 ventiladores.
+    Kit de 1º e 2º plano móvel 1,5mm de esp. com furos 9x9mm para porca gaiola.
+    Guia argolas soldadas internamente nas colunas traseiras para acomodação de cabos.
+    Base de 1,9mm de esp. com abertura na parte traseira para passagem de cabos.
+    Kit ventilação forçada para teto com 02 ou 04 ventiladores 110/220v (opcional).
+    Kit rodízios modelo-A: 04 rodas, sendo 02 rodas com travas e 02 rodas sem travas (opcional).
+    Pintura epóxi-pó texturizada (estrutura grafite RAL 13.701, laterais, porta e fundo Bege RAL 7032).
+
+aplicação: guardar switchs";
+026403;158142;2020;998;Solução de TIC;SERVIÇOS DE TIC;1619;OBRAS CIVIS DE EDIFICACOES PREDIAIS;Reforma do Refeitório, Laboratórios de programação (I,II,III) de Indústrias(I,II,III,IV,V) Estação da ETE, Reforma da sala da Direção Geral e Construção de Laboratório de Prototipagem  no IFAM Campus Manaus Distrito Industrial;
+026403;158142;2020;999;Solução de TIC;SERVIÇOS DE TIC;1619;OBRAS CIVIS DE EDIFICACOES PREDIAIS;Contratação em empresa de engenharia para elaboração de projetos para o Campus Manaus Distrito Industrial;
+026403;158142;2020;1000;Solução de TIC;MATERIAIS DE TIC;150030;ESTAÇÃO TRABALHO / DIVISÓRIAS MOBILIÁRIOS DIVERSOS;ESTAÇÃO TRABALHO / DIVISÓRIAS MOBILIÁRIOS DIVERSOS, NOME ESTAÇÃO TRABALHO/DIVISÓRIAS/MOBILIÁRIOS;
+026403;158142;2020;1001;Solução de TIC;MATERIAIS DE TIC;1791;ÔNIBUS;ÔNIBUS, NOME ONIBUS;
+026403;158142;2020;1002;Solução de TIC;SERVIÇOS DE TIC;1619;OBRAS CIVIS DE EDIFICACOES PREDIAIS;Construção de Cobertura na Guarita e portaria do IFAM Campus Presidente Figueiredo;
+026403;158142;2020;1003;Solução de TIC;MATERIAIS DE TIC;151059;PEÇAS / ACESSÓRIOS EQUIPAMENTOS ESPECIALIZADOS;PEÇAS / ACESSÓRIOS EQUIPAMENTOS ESPECIALIZADOS, NOME PEÇAS / ACESSÓRIOS EQUIPAMENTOS ESPECIAL;
+026403;158142;2020;1004;Solução de TIC;SERVIÇOS DE TIC;1619;OBRAS CIVIS DE EDIFICACOES PREDIAIS;Construção de Galpão de estrutura metálica no IFAM Campus Maués;
+026403;158142;2020;1005;Solução de TIC;SERVIÇOS DE TIC;1619;OBRAS CIVIS DE EDIFICACOES PREDIAIS;Construção de parte do muro/cerca do IFAM campus Maués;
+026403;158142;2020;1006;Solução de TIC;SERVIÇOS DE TIC;1619;OBRAS CIVIS DE EDIFICACOES PREDIAIS;Construção da Base Experimental no IFAM Campus Manacapuru;
+026403;158142;2020;1007;Solução de TIC;SERVIÇOS DE TIC;1619;OBRAS CIVIS DE EDIFICACOES PREDIAIS;Construção de quadra poliesportiva no IFAM Campus Manacapuru;
+026403;158142;2020;1008;Solução de TIC;MATERIAIS DE TIC;150030;ESTAÇÃO TRABALHO / DIVISÓRIAS MOBILIÁRIOS DIVERSOS;ESTAÇÃO TRABALHO / DIVISÓRIAS MOBILIÁRIOS DIVERSOS, NOME ESTAÇÃO TRABALHO/DIVISÓRIAS/MOBILIÁRIOS;
+026403;158142;2020;1009;Solução de TIC;SERVIÇOS DE TIC;1619;OBRAS CIVIS DE EDIFICACOES PREDIAIS;Construção de blocos de sala de aula para funcionamento inicial do curso de Bacharelado em Engenharia Ambiental;
+026403;158142;2020;1010;Solução de TIC;SERVIÇOS DE TIC;1619;OBRAS CIVIS DE EDIFICACOES PREDIAIS;Construção de passarela coberta entre os blocos e área de convivência do IFAM Campus Humaitá;
+026403;158142;2020;1011;Solução de TIC;SERVIÇOS DE TIC;1619;OBRAS CIVIS DE EDIFICACOES PREDIAIS;Construção do muro/cerca de alvenaria com gradio no IFAM Campus Lábrea;
+026403;158142;2020;1012;Solução de TIC;SERVIÇOS DE TIC;1619;OBRAS CIVIS DE EDIFICACOES PREDIAIS;Construção da Fachada do prédio administrativo do IFAM Campus Lábrea;
+026403;158142;2020;1013;Solução de TIC;SERVIÇOS DE TIC;1619;OBRAS CIVIS DE EDIFICACOES PREDIAIS;Constrição do Bicicletário no IFAM Campus Lábrea;
+026403;158142;2020;1014;Solução de TIC;SERVIÇOS DE TIC;1619;OBRAS CIVIS DE EDIFICACOES PREDIAIS;Construção do Complexo aquícola de produção intensiva no IFAM Campus Parintins;
+026403;158142;2020;1015;Solução de TIC;MATERIAIS DE TIC;150030;ESTAÇÃO TRABALHO / DIVISÓRIAS MOBILIÁRIOS DIVERSOS;ESTAÇÃO TRABALHO / DIVISÓRIAS MOBILIÁRIOS DIVERSOS, NOME ESTAÇÃO TRABALHO/DIVISÓRIAS/MOBILIÁRIOS;
+026403;158142;2020;1016;Solução de TIC;SERVIÇOS DE TIC;1619;OBRAS CIVIS DE EDIFICACOES PREDIAIS;Aquisição de equipamentos de informática no IFAM Campus Parintins;
+026403;158142;2020;1017;Solução de TIC;SERVIÇOS DE TIC;1619;OBRAS CIVIS DE EDIFICACOES PREDIAIS;Construção de Galpão de estrutura metálica;
+026403;158142;2020;1018;Solução de TIC;MATERIAIS DE TIC;150030;ESTAÇÃO TRABALHO / DIVISÓRIAS MOBILIÁRIOS DIVERSOS;ESTAÇÃO TRABALHO / DIVISÓRIAS MOBILIÁRIOS DIVERSOS, NOME ESTAÇÃO TRABALHO/DIVISÓRIAS/MOBILIÁRIOS;
+026403;158142;2020;1019;Solução de TIC;SERVIÇOS DE TIC;1619;OBRAS CIVIS DE EDIFICACOES PREDIAIS;Construção de passarela coberta entre os blocos e área de convivência do IFAM Campus Humaitá;
+026403;158142;2020;1020;Solução de TIC;SERVIÇOS DE TIC;1619;OBRAS CIVIS DE EDIFICACOES PREDIAIS;Construção do muro/cerca de alvenaria com gradio no IFAM Campus Lábrea;
+026403;158142;2020;1021;Solução de TIC;SERVIÇOS DE TIC;1619;OBRAS CIVIS DE EDIFICACOES PREDIAIS;Construção da Fachada do prédio administrativo do IFAM Campus Lábrea;
+026403;158142;2020;1022;Solução de TIC;SERVIÇOS DE TIC;1619;OBRAS CIVIS DE EDIFICACOES PREDIAIS;Contrução do Bicicletário no IFAM Campus Lábrea;
+026403;158142;2020;1023;Solução de TIC;SERVIÇOS DE TIC;1619;OBRAS CIVIS DE EDIFICACOES PREDIAIS;Construção do Complexo aquícola de produção intensiva no IFAM Campus Parintins;
+026403;158142;2020;1024;Solução de TIC;SERVIÇOS DE TIC;1619;OBRAS CIVIS DE EDIFICACOES PREDIAIS;Aquisição e instalação de equipamentos para o laboratório de reprodução de peixes e produção de alevinos no IFAM Campus Parintins;
+026403;158142;2020;1025;Solução de TIC;SERVIÇOS DE TIC;1619;OBRAS CIVIS DE EDIFICACOES PREDIAIS;Aquisição de equipamentos de informática no IFAM Campus Parintins;
+026403;158142;2020;1026;Solução de TIC;SERVIÇOS DE TIC;1619;OBRAS CIVIS DE EDIFICACOES PREDIAIS;Construção de quadra poliesportiva coberta no IFAM Campus Eirunepe;
+026403;158142;2020;1027;Solução de TIC;SERVIÇOS DE TIC;1619;OBRAS CIVIS DE EDIFICACOES PREDIAIS;Obras no IFAM  Campus São Gabriel da Cachoeira;
+026403;158142;2020;1028;Solução de TIC;SERVIÇOS DE TIC;1619;OBRAS CIVIS DE EDIFICACOES PREDIAIS;Construção de um Centro de  Encubadora no IFAM Campus Tabatinga;
+026403;158142;2020;1029;Solução de TIC;SERVIÇOS DE TIC;1619;OBRAS CIVIS DE EDIFICACOES PREDIAIS;"Obra de construção do prédio principal do IFAM Campus Avançado Iranduba
+";
+026403;158142;2020;1047;Solução de TIC;SERVIÇOS DE TIC;1791;ÔNIBUS;ÔNIBUS, NOME ONIBUS;
+026403;158142;2020;1048;Solução de TIC;MATERIAIS DE TIC;150515;LIVRO;LIVRO, NOME LIVRO;
+026403;158142;2020;1049;Solução de TIC;MATERIAIS DE TIC;442410;ACESSÓRIOS PARA ESTUDO/TREINAMENTO;ACESSÓRIOS PARA ESTUDO/TREINAMENTO, TIPO PLANO INCLINADO, APRESENTAÇÃO SENSORES E MULTICRONÔMETRO DE ROLAGEM DE DADOS, APLICAÇÃO ENSINO DA MECÂNICA DA PARTÍCULA/LEIS DE NEWTON/ MO;
+026403;158142;2020;1050;Solução de TIC;MATERIAIS DE TIC;24562;MESA MICROCOMPUTADOR;MESA MICROCOMPUTADOR, NOME MESA MICROCOMPUTADOR;
+026403;158142;2020;1051;Solução de TIC;SERVIÇOS DE TIC;1619;OBRAS CIVIS DE EDIFICACOES PREDIAIS;OBRA DE CERCAMENTO COM PILARES DE CONCRETO DE ARAME NOPERÍMETRO DE 800M DO TERRENO DO IFAM CAMPUS IRANDUBA;
+026403;158142;2020;1052;Solução de TIC;SERVIÇOS DE TIC;1619;OBRAS CIVIS DE EDIFICACOES PREDIAIS;CONSTRUÇÃO DO PORTAL, GUARITA DE 12M² E UM PORTÃO ELÉTRICO DE 5X2M, NA ENTRADA DO TERRENO PARA CONTROLE DE VEÍCULO E PESSOAS;
+026403;158142;2020;1053;Solução de TIC;MATERIAIS DE TIC;150770;TOTEM IDENTIFICAÇÃO;TOTEM IDENTIFICAÇÃO, NOME TOTEM IDENTIFICAÇÃO;
+026403;158142;2020;1054;Solução de TIC;MATERIAIS DE TIC;84867;VEICULO PARA TRANSPORTAR AUTOMOVEL / CAMINHAO;VEICULO PARA TRANSPORTAR AUTOMOVEL / CAMINHAO, NOME VEICULO PARA TRANSPORTAR AUTOMOVEL / CAM;
+026403;158142;2020;1055;Solução de TIC;MATERIAIS DE TIC;442556;EQUIPAMENTO / ACESSÓRIO ROBÓTICO;EQUIPAMENTO / ACESSÓRIO ROBÓTICO, TIPO KIT CHASSI 2WD ROBO, APLICAÇÃO EQUIPAMENTOS DE ROBÓTICA, CARACTERÍSTICAS ADICIONAIS CHASSI, 1 RODA BOBA UNIVERSAL, 2 RODAS DE PLASTICO;
+026403;158142;2020;1056;Solução de TIC;MATERIAIS DE TIC;130575;EQUIPAMENTO / ACESSÓRIO ROBÓTICO;EQUIPAMENTO / ACESSÓRIO ROBÓTICO, NOME ROBO MOVEL;
+026403;158142;2020;1057;Solução de TIC;SERVIÇOS DE TIC;26700;OUTSOURCING DE IMPRESSAO - PAGINAS A4 - POLICROMATICO - EXCEDENTE A FRANQUIA - COM PAPEL;Outsourcing de impressão - páginas a4 - policromático - excedente a franquia - com papel.;
+026403;158142;2020;1058;Solução de TIC;SERVIÇOS DE TIC;26581;OUTSOURCING DE  IMPRESSAO - PAGINAS A4 - MONOCROMATICO - DENTRO DA FRANQUIA COM PAPEL;Outsourcing de impressão - páginas a4 - monocromático - dentro da franquia com papel;
+026403;158142;2020;1059;Solução de TIC;SERVIÇOS DE TIC;26662;OUTSOURCING DE IMPRESSAO - PAGINAS A4 - MONOCROMATICO - EXCEDENTE A FRANQUIA COM PAPEL;Outsourcing de impressão - páginas a4 - monocromático - excedente a franquia com papel;
+026403;158142;2020;1060;Solução de TIC;SERVIÇOS DE TIC;25925;MANUTENCAO EVOLUTIVA DE  SOFTWARE (ACRESCIMO DE NOVAS FUNCIONALIDADES) - JAVA;Manutenção evolutiva de software (acréscimo de novas funcionalidades) - java;
+026403;158142;2020;1061;Solução de TIC;SERVIÇOS DE TIC;26000;SUSTENTACAO DE SOFTWARE;Sustentação de software;
+026403;158142;2020;1062;Solução de TIC;SERVIÇOS DE TIC;27324;SERVICOS DE PESQUISA, ANALISE E DESENVOLVIMENTO EM TECNOLOGIA DA INFORMACAO E COMUNICACAO (TIC);Serviços de pesquisa, análise e desenvolvimento em tecnologia informação e comunicação (tic);
+026403;158142;2020;1063;Solução de TIC;SERVIÇOS DE TIC;27510;CONTRATOS DE PRESTACAO DE SERVICOS DE ASSISTENCIA TECNICA E CIENTIFICA;Contratos de prestação de serviços de assistência técnica e científica;
+026403;158142;2020;1064;Solução de TIC;MATERIAIS DE TIC;450148;FONTE ALIMENTAÇÃO ININTERRUPTA;FONTE ALIMENTAÇÃO ININTERRUPTA, TENSÃO ENTRADA 380/220, TENSÃO SAÍDA 380/220, TIPO ESTABILIZADOR INTERNO GERENCIADO POR MICROCONTROLADOR OU DSP, TIPO ALARME AUDIOVISUAL, AUTONOMIA BATERIA 60 MIN A MEIA CARGA, NÚMERO DE FASES TRIFÁSICO, POTÊNCIA SAÍDA 18, CAPACIDADE NOMINAL 20 KVA, CARACTERÍSTICAS ADICIONAIS 1 ON LINE SYSTEM, BYPASS ESTÁTICO E MANUAL;
+026403;158142;2020;1065;Solução de TIC;MATERIAIS DE TIC;451717;MICROCOMPUTADOR;MICROCOMPUTADOR, MEMÓRIA RAM SUPERIOR A 8, NÚCLEOS POR PROCESSADOR ATÉ 4, ARMAZENAMENTO HDD 1, ARMAZENAMENTO SSD SEM DISCO SSD, MONITOR 21 A 29, COMPONENTES ADICIONAIS COM TECLADO E MOUSE, SISTEMA OPERACIONAL OPEN SOURCE, GARANTIA ON SITE 36;
+026403;158142;2020;1112;Solução de TIC;MATERIAIS DE TIC;150345;EQUIPAMENTO WIRELESS;"EQUIPAMENTO WIRELESS, NOME EQUIPAMENTO WIRELESS
+
+Access point";
+026403;158142;2020;1131;Solução de TIC;MATERIAIS DE TIC;463219;CONECTOR CABO PAR TRANÇADO;CONECTOR CABO PAR TRANÇADO, TIPO MACHO, MODELO EZ RJ45, QUANTIDADE VIAS 8, QUANTIDADE CONTATOS 8, CATEGORIA 5E, APLICAÇÃO INSTALAÇÃO PONTO DE REDE;
+026403;158142;2020;1132;Solução de TIC;MATERIAIS DE TIC;434586;CABO REDE COMPUTADOR;CABO REDE COMPUTADOR, MATERIAL REVESTIMENTO PVC - CLORETO DE POLIVINILA ANTI-CHAMA, MATERIAL CONDUTOR COBRE, BITOLA CONDUTOR 24, TIPO CONDUTOR TRANÇADO 4 PARES, TIPO CABO UTP 4 PARES PADRÃO TIA 568A, COR AZUL, PADRÃO CABEAMENTO UTP-5E, CATEGORIA 5E, NORMAS TÉCNICAS ANSI/TIA/EIA 568-A;
+026403;158142;2020;1133;Solução de TIC;MATERIAIS DE TIC;461894;NOTEBOOK;NOTEBOOK, TELA ATÉ 14, INTERATIVIDADE DA TELA SENSÍVEL AO TOQUE, MEMÓRIA RAM 5 A 8, NÚCLEOS POR PROCESSADOR ATÉ 4, ARMAZENAMENTO HDD ATÉ 500, ARMAZENAMENTO SSD SEM DISCO SSD, BATERIA ATÉ 4 CÉLULAS, ALIMENTAÇÃO BIVOLT AUTOMÁTICA, SISTEMA OPERACIONAL PROPRIETÁRIO, GARANTIA ON SITE 12;
+026403;158142;2020;1134;Solução de TIC;MATERIAIS DE TIC;22918;COOPERACAO  CONVENIOS  CONTRATOS - AREA NACIONAL E INTERNACIONAL;Cooperação SIG-UFRN;
+026403;158142;2020;1135;Solução de TIC;SERVIÇOS DE TIC;26611;outs;Padronização de serviços de impressão e redução de custo de equipamentos e suprimentos.;
+026403;158142;2020;1136;Solução de TIC;SERVIÇOS DE TIC;26697;OUTSOURCING DE IMPRESSAO - PAGINAS A4 - POLICROMATICO - EXCEDENTE A FRANQUIA SEM PAPEL;Padronização de serviços de impressão e redução de custo de equipamentos e suprimentos.;
+026403;158142;2020;1137;Solução de TIC;SERVIÇOS DE TIC;26573;OUTSOURCING DE  IMPRESSAO - PAGINAS A4 - MONOCROMATICO - DENTRO DA FRANQUIA SEM PAPEL;Padronização de serviços de impressão e redução de custo de equipamentos e suprimentos.;
+026403;158142;2020;1138;Solução de TIC;SERVIÇOS DE TIC;26654;OUTSOURCING DE IMPRESSAO - PAGINAS A4 - MONOCROMATICO - EXCEDENTE A FRANQUIA SEM PAPEL;Padronização de serviços de impressão e redução de custo de equipamentos e suprimentos.;
+026403;158142;2020;1139;Solução de TIC;MATERIAIS DE TIC;447274;ROTULADOR;ROTULADOR, LARGURA FITA 9 E 12, CARACTERES 12, FUNCIONAMENTO ELETRÔNICO, FONTE ALIMENTAÇÃO PILHA, CARACTERÍSTICAS ADICIONAIS PORTÁTIL/ETIQUETAS DE PLÁSTICO;
+026403;158142;2020;1140;Solução de TIC;MATERIAIS DE TIC;457011;CONJUNTO FERRAMENTAS;CONJUNTO FERRAMENTAS, COMPONENTES 110 PEÇAS, APLICAÇÃO MANUTENÇÃO EM GERAL, CARACTERÍSTICAS ADICIONAIS MALETA TERMOPLÁSTICA;
+026403;158142;2020;1141;Solução de TIC;MATERIAIS DE TIC;399196;GAVETA DISCO RÍGIDO;GAVETA DISCO RÍGIDO, TIPO EXTERNA, TIPO PORTA USB 3.0, CARACTERÍSTICAS ADICIONAIS COM CABO CONEXÃO, APLICAÇÃO DISCO RÍGIDO SATA 3.0 GBIT/S DE 3,5 POLEGADAS;
+026403;158142;2020;1143;Solução de TIC;SERVIÇOS DE TIC;27090;OUTROS SERVICOS PARA A INFRAESTRUTURA DE TECNOLOGIA DA INFORMACAO E COMUNICACAO (TIC);Contratação de serviços para soluções de Infraestrutura de redes, data center.;
+026403;158142;2020;1144;Solução de TIC;MATERIAIS DE TIC;459959;SERVIDOR;SERVIDOR, TIPO RACK, PROCESSADORES FÍSICOS 4, NÚCLEOS POR PROCESSADOR 15 A 20, MEMÓRIA RAM 768, INTERFACE REDE LAN NO MÍNIMO 8, INTERFACE REDE SAN 2, ARMAZENAMENTO SATA COM DISCOS SATA, ARMAZENAMENTO SAS COM DISCOS SAS, ARMAZENAMENTO SSD COM DISCOS SSD, FONTE ALIMENTAÇÃO REDUNDANTE (SWAP/HOT PLUG), SISTEMA OPERACIONAL SEM SISTEMA OPERACIONAL, GARANTIA ON SITE SUPERIOR 48;
+026403;158142;2020;1145;Solução de TIC;MATERIAIS DE TIC;459963;SERVIDOR;SERVIDOR, TIPO RACK, PROCESSADORES FÍSICOS 2, NÚCLEOS POR PROCESSADOR 10 A 14, MEMÓRIA RAM 256, INTERFACE REDE LAN NO MÍNIMO 8, INTERFACE REDE SAN SEM SAN, ARMAZENAMENTO SATA COM DISCOS SATA, ARMAZENAMENTO SAS COM DISCOS SAS, ARMAZENAMENTO SSD COM DISCOS SSD, FONTE ALIMENTAÇÃO REDUNDANTE (SWAP/HOT PLUG), SISTEMA OPERACIONAL SEM SISTEMA OPERACIONAL, GARANTIA ON SITE SUPERIOR 48;
+026403;158142;2020;1246;Solução de TIC;MATERIAIS DE TIC;451876;TABLET;TABLET, TELA SUPERIOR A 10, MEMÓRIA RAM ATÉ 4, ARMAZENAMENTO INTERNO 16, ARMAZENAMENTO EXTERNO ATÉ 32, PROCESSADOR QUAD CORE, CÂMERA FRONTAL ATÉ 8, CÂMERA TRASEIRA ATÉ 8, CONECTIVIDADE WI-FI / 3G / 4G / BLUETOOTH, SISTEMA OPERACIONAL OPEN SOURCE;
+026403;158142;2020;1247;Solução de TIC;MATERIAIS DE TIC;426616;MEMÓRIA EM CARTÃO MAGNÉTICO;MEMÓRIA EM CARTÃO MAGNÉTICO, CAPACIDADE MEMÓRIA 32, TIPO CARTAO FLASH CARD, APLICAÇÃO ARMAZENAMENTO DE DADOS;
+026403;158142;2020;1249;Solução de TIC;SERVIÇOS DE TIC;27332;SERVICOS DE CONSULTORIA EM TECNOLOGIA DA INFORMACAO E COMUNICACAO (TIC);"Contratação EMERGENCIAL de empresa especializada em banco de dados PostgreSQL.
+";
