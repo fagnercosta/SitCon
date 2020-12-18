@@ -68,7 +68,7 @@
 	        		
 	        		<li class="aw-menu__item  is-active">
 	          			<a href="#">
-	            			<i class="fa  fa-fw  fa-file-text"></i><span>Cadastros Básicos</span>
+	            			<i class="fa  fa-fw  fa-file-text"></i><span>Configuração</span>
 	            			<i class="aw-menu__navigation-icon  fa"></i>
 	          			</a>
 	      
@@ -76,35 +76,28 @@
 				            <li class="aw-menu__item  aw-menu__item--link"><a href="/pdtic/novo">Carregar PDTIC</a></li>
 				            <li class="aw-menu__item  aw-menu__item--link  is-active"><a href="/legislacao/novo">Carregar Legislação</a></li>
 				            <li class="aw-menu__item  aw-menu__item--link  is-active"><a href="/pac/novo">Carregar PAC</a></li>
+				            <li class="aw-menu__item  aw-menu__item--link  is-active"><a href="/demanda">Gestão de Regras</a></li>
 				            
 	          			</ul>
 	        		</li>
 	
 	        		<li class="aw-menu__item  is-active">
 	          			<a href="#">
-	            			<i class="fa  fa-fw  fa-file-text"></i><span>Demanda</span>
+	            			<i class="fa  fa-fw  fa-file-text"></i><span>Artefatos</span>
 	            			<i class="aw-menu__navigation-icon  fa"></i>
 	          			</a>
 	      
 	          			<ul class="aw-menu__list  aw-menu__list--sublist">
-				            <li class="aw-menu__item  aw-menu__item--link"><a href="/demanda/novo">Cadastro de DOD</a></li>
-				            <li class="aw-menu__item  aw-menu__item--link  is-active"><a href="/demanda">Pesquisar DOD</a></li>
+				            <li class="aw-menu__item  aw-menu__item--link"><a href="/demanda/novo">Demanda</a></li>
+				            <li class="aw-menu__item  aw-menu__item--link  is-active"><a href="/">ETP</a></li>
+				            <li class="aw-menu__item  aw-menu__item--link  is-active"><a href="/projeto/novo">Termo de Referência</a></li>
 				            
 	          			</ul>
 	        		</li>
 	        		
-	        		<li class="aw-menu__item  is-active">
-	          			<a href="#">
-	            			<i class="fa  fa-fw  fa-file-text"></i><span>Termo de Referência </span>
-	            			<i class="aw-menu__navigation-icon  fa"></i>
-	          			</a>
-	      
-	          			<ul class="aw-menu__list  aw-menu__list--sublist">
-				            <li class="aw-menu__item  aw-menu__item--link"><a href="/demanda/novo">Cadastro de DOD</a></li>
-				            <li class="aw-menu__item  aw-menu__item--link  is-active"><a href="/demanda">Pesquisar DOD</a></li>
-				            
-	          			</ul>
-	        		</li>
+	        		
+	        		
+	        		
 	
 	        		
 	
@@ -126,39 +119,11 @@
 <script src="/layout/javascripts/vendors.min.js"></script>
 <script src="/layout/javascripts/algaworks.min.js"></script>
 <script src="/layout/javascripts/Chart.min.js"></script>
-<script src="/layout/javascripts/dashboard.graficos.js"></script>
+
+
+<th:block layout:fragment="javascript-extra"></th:block>
 <script>
 
-	$(document).on("click", ".remover-opcao-produto", function() {
-		$(this).parent().remove();
-	});
-	
-	function adicionarOpcaoProduto(id, nome) {
-		var opcaoProduto = '<li class="opcao-produto">';
-			opcaoProduto += '<input type="hidden" name="produto[]" value="'+id+'" />';
-			opcaoProduto += '<small class="opcao-produto-nome">'+nome+'</small>';
-			opcaoProduto += '<small class="remover-opcao-produto">X</small>';
-			opcaoProduto += '</li>';
-			$('.opcoes-produtos').append($(opcaoProduto));
-			selecionarProdutosOpcoes();
-	}
-	
-	function selecionarProdutosOpcoes() {
-		var produtos = [];
-		$(".opcao-produto [name='produto[]']").each(function(i, p) {
-			produtos.push($(p).val());
-		});
-		console.log(produtos);
-		$("#produtos").val(produtos.join(","));
-	}
-	
-	$("#select-produtos").change(function() {
-		var selecionado = $(this).find(":selected");
-		if (selecionado) {			
-			adicionarOpcaoProduto(selecionado.attr("value"), selecionado.text());
-		}
-		$(this).val("");
-	});
 	
 	
 	
