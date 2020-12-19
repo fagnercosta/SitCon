@@ -14,31 +14,16 @@
 		<div class="page-header">
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-sm-8">
-						<h1 style="font-size: 40px">Pesquisar por Demandas</h1>
+					<div class="col-sm-12">
+						<h1 style="font-size: 40px">Demandas Pendentes</h1>
 					</div>
 
-					<div class="col-sm-4">
-						<div class="aw-page-header-controls">
-							<div class="btn-group" role="group" aria-label="Basic example">
-								<button type="button" class="btn btn-success">
-									Verificadas<span class="badge badge-light">4</span>
-								</button>
-								<button type="button" class="btn btn-danger">
-									<span class="badge badge-light">4</span>
-								</button>
-								<button type="button" class="btn btn-secondary">
-									<span class="badge badge-light">4</span>
-								</button>
-							</div>
-
-
-						</div>
-
-					</div>
 
 
 				</div>
+
+
+
 
 			</div>
 		</div>
@@ -58,6 +43,8 @@
 									<th>RESPONSÁVEL</th>
 									<th>SETOR</th>
 									<th>SITUACAO</th>
+									<th></th>
+									<th></th>
 
 								</tr>
 							</thead>
@@ -69,7 +56,11 @@
 									<td class="text-left" th:text="${d.responsavel}"></td>
 									<td class="text-left" th:text="${d.setor}"></td>
 									<td class="text-left" th:text="${d.situacao}"></td>
-									<td class="text-left"><a th:href="@{/demanda/enviarTIC/{id}(id=${d.id})}"> Enviar Para Análise</a></td>
+									<td class="text-left"><a
+										th:href="@{/demanda/avaliarDOD/{id}(id=${d.id})}"> Avaliar</a></td>
+
+									<td class="text-left"><a
+										th:href="@{/demanda/view/{id}(id=${d.id})}">Visualizar</a></td>
 
 								</tr>
 								<tr th:if="${#lists.isEmpty(demandas)}">

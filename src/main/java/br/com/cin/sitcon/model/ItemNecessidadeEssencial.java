@@ -11,6 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Entity
 @Table(name = "ItemNecessidadeEssencial")
@@ -26,9 +27,17 @@ public class ItemNecessidadeEssencial implements Serializable {
     @Column(name = "descricaoDetalhada")
     private String descricaoDetalhada;
     
+    @Transient
+    public boolean descricaoNecessidadeConsitente;
+    
     @ManyToOne
 	@JoinColumn(name = "id_demanda")
 	private Demanda demanda;
+    
+    @Transient
+    private boolean necessidadeInformada;
+    @Transient
+    private boolean necessidadeConsistente;
 
 	public Integer getId() {
 		return id;
@@ -52,6 +61,35 @@ public class ItemNecessidadeEssencial implements Serializable {
 	
 	public Demanda getDemanda() {
 		return demanda;
+	}
+	
+	public void setDescricaoNecessidadeConsitente(boolean descricaoNecessidadeConsitente) {
+		this.descricaoNecessidadeConsitente = descricaoNecessidadeConsitente;
+	}
+	
+	public boolean isDescricaoNecessidadeConsitente() {
+		return descricaoNecessidadeConsitente;
+	}
+	public void setNecessidadeInformada(boolean necessidadeInformada) {
+		this.necessidadeInformada = necessidadeInformada;
+	}
+	/***
+	 * 
+	 * @return
+	 */
+	public boolean isNecessidadeInformada() {
+		if(this.descricaoDetalhada.isEmpty()) {
+			return false;
+		}
+		return true;
+	}
+	
+	public boolean isNecessidadeConsistente() {
+		return necessidadeConsistente;
+	}
+	
+	public void setNecessidadeConsistente(boolean necessidadeConsistente) {
+		this.necessidadeConsistente = necessidadeConsistente;
 	}
     
     

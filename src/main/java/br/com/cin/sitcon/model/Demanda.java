@@ -41,6 +41,9 @@ public class Demanda implements Serializable {
     @Column(name = "situacao")
     private String situacao;
     
+    @Column(name = "justificativa")
+    private String justificativa;
+    
     
 	//@NotNull(message = "Campo Responsável é obriogatorio!")
 	@NotBlank(message = "Campo Responsável é obriogatorio!")
@@ -57,6 +60,9 @@ public class Demanda implements Serializable {
 	@OneToMany(mappedBy = "demanda", cascade = CascadeType.ALL,orphanRemoval = true)
 	private List<ItemNecessidadeEssencial> necessidades = new ArrayList<ItemNecessidadeEssencial>();
     
+	@OneToMany(mappedBy = "demanda", cascade = CascadeType.ALL,orphanRemoval = true)
+	private List<ItemPAC> itensPAC = new ArrayList<ItemPAC>();
+	
     public void setId(Integer id) {
 		this.id = id;
 	}
@@ -75,6 +81,14 @@ public class Demanda implements Serializable {
     
     public void setObjeto(String objeto) {
 		this.objeto = objeto;
+	}
+    
+    public void setJustificativa(String justificativa) {
+		this.justificativa = justificativa;
+	}
+    
+    public String getJustificativa() {
+		return justificativa;
 	}
     
     public String getObjeto() {
@@ -113,6 +127,14 @@ public class Demanda implements Serializable {
 		return objetivos;
 	}
 	
+	public void setItensPAC(List<ItemPAC> itensPAC) {
+		this.itensPAC = itensPAC;
+	}
+	
+	public List<ItemPAC> getItensPAC() {
+		return itensPAC;
+	}
+	
 	public void adicionarItensObjetivos(List<ItemObjetivoEstrategico> itens) {
 		this.objetivos = itens;
 		this.objetivos.forEach(a -> a.setDemanda(this));
@@ -129,6 +151,11 @@ public class Demanda implements Serializable {
 	public void adicionarItensNecessidades(List<ItemNecessidadeEssencial> itens) {
 		this.necessidades = itens;
 		this.necessidades.forEach(a -> a.setDemanda(this));
+	}
+	
+	public void adicionarItensPac(List<ItemPAC> itens) {
+		this.itensPAC = itens;
+		this.itensPAC.forEach(a -> a.setDemanda(this));
 	}
     
     

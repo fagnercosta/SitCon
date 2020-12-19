@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="'layout/LayoutPadrao'">
+
+<head>
+
+</head>
+
+<body>
+	<section layout:fragment="conteudo">
+
+		<div class="page-header">
+			<div class="container-fluid">
+
+
+				<div class="row">
+					<div class="col-sm-8">
+						<h1 style="font-size: 40px">Gestão de Demandas</h1>
+					</div>
+
+					<div class="col-sm-4">
+						<div class="aw-page-header-controls">
+							<div class="btn-group" role="group" aria-label="Basic example">
+								<a class="btn  btn-danger" th:href="@{/demanda/criadas}">
+									Minhas Demandas <span class="badge" th:text="${criadas}"></span>
+								</a>
+
+
+							</div>
+
+
+						</div>
+
+					</div>
+
+
+
+				</div>
+
+			</div>
+
+
+		</div>
+
+		<div class="container-fluid" style="width: 90%">
+			<div class="page-header">
+				<div class="row">
+					<div class="col-sm-12">
+						<h4 style="font-size: 20px; color: g">Demandas Novas</h4>
+					</div>
+
+
+
+
+				</div>
+			</div>
+
+
+			<div class="table-responsive  bw-tabela-simples">
+				<div class="container-fluid">
+
+					<div class="table-responsive  bw-tabela-simples">
+						<table class="table  table-hover">
+							<thead th:if="${not #lists.isEmpty(demandas)}">
+								<tr>
+
+									<th>ID#</th>
+									<th>OBJETO</th>
+									<th>RESPONSÁVEL</th>
+									<th>SETOR</th>
+									<th>SITUACAO</th>
+									<th></th>
+									<th></th>
+
+								</tr>
+							</thead>
+
+							<tbody>
+								<tr th:each="d : ${demandas}">
+									<td class="text-left" th:text="${d.id}"></td>
+									<td class="text-left" th:text="${d.objeto}"></td>
+									<td class="text-left" th:text="${d.responsavel}"></td>
+									<td class="text-left" th:text="${d.setor}"></td>
+									<td class="text-left" th:text="${d.situacao}"></td>
+									<td class="text-left"><a class="btn btn-success"
+										th:href="@{/demanda/view/{id}(id=${d.id})}"> Visualizar</a></td>
+
+									<td class="text-left"><a class="btn btn-success"
+										th:href="@{/demanda/enviarTIC/{id}(id=${d.id})}"> Enviar
+											Para Área de TIC</a></td>
+
+								</tr>
+								<tr th:if="${#lists.isEmpty(demandas)}">
+									<td colspan="7">Nenhum item encontrado!</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="container-fluid" style="width: 90%">
+			<div class="page-header">
+				<div class="row">
+					<div class="col-sm-12">
+						<h4 style="font-size: 20px; color: red;">Demandas para Ajustes</h4>
+					</div>
+
+
+
+
+				</div>
+			</div>
+
+
+			<div class="table-responsive  bw-tabela-simples">
+				<div class="container-fluid">
+
+					<div class="table-responsive  bw-tabela-simples">
+						<table class="table  table-hover">
+							<thead th:if="${not #lists.isEmpty(demandasAjustes)}">
+								<tr>
+
+									<th>ID#</th>
+									<th>OBJETO</th>
+									<th>RESPONSÁVEL</th>
+									<th>SETOR</th>
+									<th>SITUACAO</th>
+									<th></th>
+									<th></th>
+
+								</tr>
+							</thead>
+
+							<tbody>
+								<tr th:each="d : ${demandasAjustes}">
+									<td class="text-left" th:text="${d.id}"></td>
+									<td class="text-left" th:text="${d.objeto}"></td>
+									<td class="text-left" th:text="${d.responsavel}"></td>
+									<td class="text-left" th:text="${d.setor}"></td>
+									<td class="text-left" th:text="${d.situacao}"></td>
+									<td class="text-left"><a 
+										th:href="@{/demanda/view/{id}(id=${d.id})}"> Visualizar</a></td>
+
+									<td class="text-left"><a 
+										th:href="@{/demanda/enviarTIC/{id}(id=${d.id})}"> Enviar
+											Para Área de TIC</a></td>
+
+								</tr>
+								<tr th:if="${#lists.isEmpty(demandasAjustes)}">
+									<td colspan="7">Nenhum item encontrado!</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+
+	</section>
+
+</body>
+
+
+
+
+
+</html>

@@ -11,6 +11,10 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.Transient;
+
+import br.com.cin.sitcon.avaliacao.AvaliacaoDOD;
+import br.com.cin.sitcon.similarity.CosineSimilarity;
 
 
 @Entity
@@ -27,6 +31,9 @@ public class ItemObjetivoEstrategico implements Serializable{
     @Column(name = "descricao")
     private String descricaoObjetivo;
     
+    @Transient
+    public boolean descricaoObjetivoConsitente;
+    
     @ManyToOne
 	@JoinColumn(name = "id_demanda")
 	private Demanda demanda;
@@ -37,6 +44,15 @@ public class ItemObjetivoEstrategico implements Serializable{
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+	
+	public void setDescricaoObjetivoConsitente(boolean descricaoObjetivoConsitente) {
+		this.descricaoObjetivoConsitente = descricaoObjetivoConsitente;
+	
+	}
+	
+	public boolean isDescricaoObjetivoConsitente() {
+		return this.descricaoObjetivoConsitente;
 	}
 
 	public String getDescricaoObjetivo() {

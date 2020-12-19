@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="'layout/LayoutPadrao'">
+
+<head>
+
+</head>
+
+<body>
+	<section layout:fragment="conteudo">
+		<div class="page-header">
+			<div class="container-fluid">
+
+
+				<div class="row">
+					<div class="col-sm-8">
+						<h1 style="font-size: 40px">Avaliação De Demanda</h1>
+					</div>
+
+					<div class="col-sm-4">
+						<div class="aw-page-header-controls">
+							<div class="btn-group" role="group" aria-label="Basic example">
+								<a class="btn  btn-danger" th:href="@{/demanda/pendentes}">
+									Demandas Pendentes <span class="badge" th:text="${pendentes}"></span>
+								</a>
+
+
+							</div>
+
+
+						</div>
+
+					</div>
+
+
+
+				</div>
+
+				<div class="row"></div>
+
+			</div>
+		</div>
+
+		<div class="container-fluid" align="center"
+			style="font-family: serif; width: 90%; border: 1px solid #D3D3D3;">
+
+			<div class="row">
+				<h1 style="font-size: 50px">Documento Oficial de Demanda</h1>
+				<br />
+			</div>
+
+			<div class="row">
+
+				<div class="col-sm-4"></div>
+
+				<div class="col-sm-4" align="left">
+
+					<table>
+						<tr>
+							<td align="right" style="font-weight: bold;">RESPONSÁVEL:</td>
+							<td align="left" th:text="${demanda.responsavel}"
+								style="font-size: 20px; padding: 5px; font-family: serif;"></td>
+						</tr>
+						<tr>
+							<td align="right" style="font-weight: bold;">SETOR
+								REQUISITANTE :</td>
+							<td align="left" th:text="${demanda.setor}"
+								style="font-size: 20px; padding: 5px; font-family: serif;"></td>
+						</tr>
+
+					</table>
+				</div>
+
+			</div>
+			<div class="container-fluid" align="left">
+				<div class="table-responsive  bw-tabela-simples">
+					<div class="container-fluid">
+
+						<div class="table-responsive  bw-tabela-simples">
+							<table class="table  table-hover">
+								<thead style="font-size: 20px; font-weight: bold;">
+									<tr>
+										<th>1. OBJETO DA CONTRATAÇÃO</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<tr>
+										<td><span th:text="${demanda.objeto}"
+											style="font-size: 20px"></span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container-fluid" align="left">
+				<div class="table-responsive  bw-tabela-simples">
+					<div class="container-fluid">
+
+						<div class="table-responsive  bw-tabela-simples">
+							<table class="table  table-hover">
+								<thead style="font-size: 20px; font-weight: bold;">
+									<tr>
+										<th>2. JUSTIFICATIVA/MOTIVAÇÃO</th>
+										<th>Requisito Legal</th>
+										<th>Em Comformidade</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<tr>
+										<td><span th:text="${demanda.justificativa}"
+											style="font-size: 20px"></span></td>
+
+										<td><span>Art. 10. A fase de
+												Planejamento da Contratação terá início com o recebimento
+												pela Área de TIC do Documento de Oficialização da Demanda,
+												elaborado pela Área Requisitante da solução, que conterá no
+												mínimo: II - explicitação da motivação e dos resultados a
+												serem alcançados com a contratação da solução de TIC;</span></td>
+
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+
+
+			<div class="row">
+				<div class="col-sm-12" align="left">
+					<div class="col-sm-12">
+						<h2 style="font-size: 20px; font-weight: bold;">2.1. Objetivo
+							Estratégio PDTIC</h2>
+					</div>
+				</div>
+			</div>
+
+			<div class="container-fluid">
+
+				<div class="table-responsive  bw-tabela-simples">
+					<div class="container-fluid">
+
+						<div class="table-responsive  bw-tabela-simples">
+							<table class="table  table-hover">
+								<thead>
+									<tr th:if="${not #lists.isEmpty(objetivos)}">
+
+
+										<th>Objetivo</th>
+
+										<th>Requisito Legal</th>
+										<th>Em Conformidade</th>
+
+
+									</tr>
+
+									<tr th:if="${#lists.isEmpty(objetivos)}">
+
+										<th>Crítica</th>
+										<th>Requisito Legal</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<tr th:if="${not #lists.isEmpty(objetivos)}"
+										th:each="o : ${objetivos}">
+
+
+										<td th:text="${o.descricaoObjetivo}"></td>
+
+										<td><span style="color: red;"> Art. 10. A fase de
+												Planejamento da Contratação terá início com o recebimento
+												pela Área de TIC do Documento de Oficialização da Demanda,
+												elaborado pela Área Requisitante da solução, que conterá no
+												mínimo: I - necessidade da contratação, considerando os
+												objetivos estratégicos e as necessidades corporativas do
+												órgão ou entidade, bem como o seu alinhamento ao PDTIC e ao
+												Plano Anual de Contratações; </span></td>
+
+										<td th:if="${o.descricaoObjetivoConsitente}"><i
+											class="glyphicon glyphicon-ok" style="color: green;">SIM</i></td>
+										<td th:if="${not o.descricaoObjetivoConsitente}"><a
+											href="#" style="color: red"
+											title="Não foi encontrado do PDTIC nenhum objetico que coresponde ao Objetivo informado"><i
+												class="glyphicon glyphicon-remove" style="color: red;"></i>
+												NÃO</a></td>
+
+
+									</tr>
+									<tr th:if="${#lists.isEmpty(objetivos)}">
+										<td class="text-left alert alert-danger" role="alert">Documento
+											Não está Atendendo à Legislação <i class=""></i>
+										</td>
+										<td class="text-left"><span style="color: red;">
+												Art. 10. A fase de Planejamento da Contratação terá início
+												com o recebimento pela Área de TIC do Documento de
+												Oficialização da Demanda, elaborado pela Área Requisitante
+												da solução, que conterá no mínimo: I - necessidade da
+												contratação, considerando os objetivos estratégicos e as
+												necessidades corporativas do órgão ou entidade, bem como o
+												seu alinhamento ao PDTIC e ao Plano Anual de Contratações; </span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-12" align="left">
+					<div class="col-sm-12">
+						<h2 style="font-size: 20px; font-weight: bold;">2.2.
+							Necessidades da PDTIC</h2>
+					</div>
+				</div>
+			</div>
+
+			<div class="container-fluid">
+
+				<div class="table-responsive  bw-tabela-simples">
+					<div class="container-fluid">
+
+						<div class="table-responsive  bw-tabela-simples">
+							<table class="table  table-hover">
+								<thead>
+									<tr th:if="${not #lists.isEmpty(necessidades)}">
+
+
+										<th>Necessidade</th>
+										<th>Requisito Legal</th>
+										<th>Em Conformidade</th>
+
+
+									</tr>
+
+									<tr th:if="${#lists.isEmpty(necessidades)}">
+
+										<th>Crítica</th>
+										<th>Requisito Legal</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<tr th:if="${not #lists.isEmpty(necessidades)}"
+										th:each="n : ${necessidades}">
+
+										<td th:text="${n.descricaoDetalhada}"></td>
+
+
+										<td><span style="color: red;"> Art. 10. A fase de
+												Planejamento da Contratação terá início com o recebimento
+												pela Área de TIC do Documento de Oficialização da Demanda,
+												elaborado pela Área Requisitante da solução, que conterá no
+												mínimo: I - necessidade da contratação, considerando os
+												objetivos estratégicos e as necessidades corporativas do
+												órgão ou entidade, bem como o seu alinhamento ao PDTIC e ao
+												Plano Anual de Contratações; </span></td>
+
+										<td th:if="${n.descricaoNecessidadeConsitente}">SIM</td>
+										<td th:if="${not n.descricaoNecessidadeConsitente}"><a
+											href="#"
+											title="Não foi encontrado do PDTIC nenhum objetico que coresponde ao Objetivo informado">
+												<i class="glyphicon glyphicon-ok" style="color: RED;">NÃO</i>
+										</a></td>
+
+
+									</tr>
+									<tr th:if="${#lists.isEmpty(necessidades)}">
+										<td class="text-left alert alert-danger" role="alert">Documento
+											Não está Atendendo à Legislação <i class=""></i>
+										</td>
+										<td class="text-left"><span style="color: red;">
+												Art. 10. A fase de Planejamento da Contratação terá início
+												com o recebimento pela Área de TIC do Documento de
+												Oficialização da Demanda, elaborado pela Área Requisitante
+												da solução, que conterá no mínimo: I - necessidade da
+												contratação, considerando os objetivos estratégicos e as
+												necessidades corporativas do órgão ou entidade, bem como o
+												seu alinhamento ao PDTIC e ao Plano Anual de Contratações; </span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+					</div>
+				</div>
+
+
+
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-12" align="left">
+					<div class="col-sm-12">
+						<h2 style="font-size: 20px; font-weight: bold;">2.2.
+							Alinhamento com o PAC</h2>
+					</div>
+				</div>
+			</div>
+
+
+
+			<div class="form-group">
+				<a class="btn  btn-danger"
+					th:href="@{/demanda/devolverParaAjustes/{id}(id=${demanda.id})}">Devolver
+					Demanda para Ajustes</a> <a class="btn  btn-danger" th:href="@{/}">Aprovar
+					Demanda</a>
+			</div>
+
+
+
+		</div>
+	</section>
+
+
+
+	<th:block layout:fragment="javascript-extra">
+		<script
+			th:src="@{/layout/javascripts/demanda/demanda.adicionar.objetivo.js}"></script>
+		<script>
+			$('.js-abas-demanda a').click(function(e) {
+				e.preventDefault();
+				$('#form-demanda .active').removeClass('active');
+				$(this).parent().addClass('active');
+				$($(this).attr('href')).addClass('active');
+				$(this).tab('show');
+			});
+
+			$(document).on(
+					"click",
+					".bnt-necessidade",
+					function() {
+						var link = $('.btn-add').attr('data-href');
+						var nomeNecessidade = $('.js-descricao-necessidade')
+								.val().replace('/', " ");
+						;
+
+						var action = link + "/" + nomeNecessidade
+
+						$.ajax({
+							url : action,
+							type : "GET",
+
+							success : function(resposta) {
+
+								$('.js-tabela-necessidades-container').html(
+										resposta);
+								$('.js-descricao-necessidade').val("");
+
+							}
+						})
+
+					});
+
+			$(document).on("click", ".bnt-objetivo", function() {
+				var link = $('.btn-add-obj').attr('data-href');
+				var nomeObjetivo = $('.js-descricao-objetivo-input').val();
+
+				var action = link + "/" + nomeObjetivo
+
+				$.ajax({
+					url : action,
+					type : "GET",
+
+					success : function(resposta) {
+
+						$('.js-tabela-objetivos-container').html(resposta);
+						$('.js-descricao-objetivo-input').val("");
+
+					}
+				})
+
+			});
+		</script>
+
+		<script
+			th:src="@{/layout/javascripts/demanda/demanda.adicionar.objetivo.js}"></script>
+
+
+
+
+
+	</th:block>
+
+
+
+
+
+</body>
+
+
+
+
+
+</html>

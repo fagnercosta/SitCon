@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="'layout/LayoutPadrao'">
+
+<head>
+
+</head>
+
+<body>
+	<section layout:fragment="conteudo">
+		<div class="page-header">
+			<div class="container-fluid">
+
+
+				<div class="row">
+					<div class="col-sm-8">
+						<h1 style="font-size: 40px">Avaliação De Demanda</h1>
+					</div>
+
+					<div class="col-sm-4">
+						<div class="aw-page-header-controls">
+							<div class="btn-group" role="group" aria-label="Basic example">
+								<a class="btn  btn-danger" th:href="@{/demanda/criadas}">
+									Minhas DemandaS <span class="badge" th:text="${criadas}"></span>
+								</a>
+
+
+							</div>
+
+
+						</div>
+
+					</div>
+
+
+
+				</div>
+
+				<div class="row"></div>
+
+			</div>
+		</div>
+
+		<div class="container-fluid" align="center"
+			style="font-family: serif; width: 80%">
+
+			<div class="row">
+				<h1 style="font-size: 50px">Documento Oficial de Demanda</h1>
+				<br />
+			</div>
+
+			<div class="row">
+
+				<div class="col-sm-4"></div>
+
+				<div class="col-sm-4" align="left">
+
+					<table>
+						<tr>
+							<td align="right" style="font-weight: bold;">RESPONSÁVEL:</td>
+							<td align="left" th:text="${demanda.responsavel}"
+								style="font-size: 20px; padding: 5px; font-family: serif;"></td>
+						</tr>
+						<tr>
+							<td align="right" style="font-weight: bold;">SETOR
+								REQUISITANTE :</td>
+							<td align="left" th:text="${demanda.setor}"
+								style="font-size: 20px; padding: 5px; font-family: serif;"></td>
+						</tr>
+
+					</table>
+				</div>
+
+			</div>
+
+			<div class="row">
+				<div class="col-sm-12" align="left">
+					<div class="col-sm-12">
+						<h1 style="font-size: 20px; font-weight: bold;">1. OBJETO DA
+							CONTRATAÇÃO</h1>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-12" align="left">
+					<div class="col-sm-12">
+						<span th:text="${demanda.objeto}" style="font-size: 20px"></span>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-12" align="left">
+					<div class="col-sm-12">
+						<h1 style="font-size: 20px; font-weight: bold;">2. Justificativa</h1>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-12" align="left">
+					<div class="col-sm-12">
+						<h2 style="font-size: 20px; font-weight: bold;">2.1. Objetivo Estratégio PDTIC</h2>
+					</div>
+				</div>
+			</div>
+
+			<div class="container-fluid">
+
+				<div class="table-responsive  bw-tabela-simples">
+					<div class="container-fluid">
+
+						<div class="table-responsive  bw-tabela-simples">
+							<table class="table  table-hover">
+								<thead>
+									<tr th:if="${not #lists.isEmpty(objetivos)}">
+
+										<th>ID#</th>
+										<th>Objetivo</th>
+										
+									</tr>
+									
+									
+								</thead>
+
+								<tbody>
+									<tr th:if="${not #lists.isEmpty(objetivos)}" th:each="o : ${objetivos}">
+										<td></td>
+									</tr>
+									
+								</tbody>
+							</table>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-12" align="left">
+					<div class="col-sm-12">
+						<h2 style="font-size: 20px; font-weight: bold;">2.2. Necessidades da PDTIC</h2>
+					</div>
+				</div>
+			</div>
+			
+			<div class="container-fluid">
+
+				<div class="table-responsive  bw-tabela-simples">
+					<div class="container-fluid">
+
+						<div class="table-responsive  bw-tabela-simples">
+							<table class="table  table-hover">
+								<thead>
+									<tr th:if="${not #lists.isEmpty(necessidades)}">
+
+										<th>ID#</th>
+										<th>Necessidade</th>
+										<th>Objetivo Estratégico</th>
+										
+										
+
+									</tr>
+									
+									
+								</thead>
+
+								<tbody>
+									<tr th:if="${not #lists.isEmpty(necessidades)}" th:each="n : ${necessidades}">
+									
+										<td th:text="${n.id}"></td>
+										<td th:text="${n.descricaoNecessidade}"></td>
+						
+										
+								
+
+									</tr>
+									<tr th:if="${#lists.isEmpty(necessidades)}">
+									
+										
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+
+
+
+
+		</div>
+
+
+	</section>
+
+
+
+	<th:block layout:fragment="javascript-extra">
+		<script
+			th:src="@{/layout/javascripts/demanda/demanda.adicionar.objetivo.js}"></script>
+		<script>
+			$('.js-abas-demanda a').click(function(e) {
+				e.preventDefault();
+				$('#form-demanda .active').removeClass('active');
+				$(this).parent().addClass('active');
+				$($(this).attr('href')).addClass('active');
+				$(this).tab('show');
+			});
+
+			$(document).on(
+					"click",
+					".bnt-necessidade",
+					function() {
+						var link = $('.btn-add').attr('data-href');
+						var nomeNecessidade = $('.js-descricao-necessidade')
+								.val().replace('/', " ");
+						;
+
+						var action = link + "/" + nomeNecessidade
+
+						$.ajax({
+							url : action,
+							type : "GET",
+
+							success : function(resposta) {
+
+								$('.js-tabela-necessidades-container').html(
+										resposta);
+								$('.js-descricao-necessidade').val("");
+
+							}
+						})
+
+					});
+
+			$(document).on("click", ".bnt-objetivo", function() {
+				var link = $('.btn-add-obj').attr('data-href');
+				var nomeObjetivo = $('.js-descricao-objetivo-input').val();
+
+				var action = link + "/" + nomeObjetivo
+
+				$.ajax({
+					url : action,
+					type : "GET",
+
+					success : function(resposta) {
+
+						$('.js-tabela-objetivos-container').html(resposta);
+						$('.js-descricao-objetivo-input').val("");
+
+					}
+				})
+
+			});
+		</script>
+
+		<script
+			th:src="@{/layout/javascripts/demanda/demanda.adicionar.objetivo.js}"></script>
+
+
+
+
+
+	</th:block>
+
+
+
+
+
+</body>
+
+
+
+
+
+</html>

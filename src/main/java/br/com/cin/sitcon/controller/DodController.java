@@ -1,5 +1,7 @@
 package br.com.cin.sitcon.controller;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 import javax.validation.Valid;
@@ -18,6 +20,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import br.com.cin.sitcon.avaliacao.AvaliacaoDOD;
 import br.com.cin.sitcon.model.Demanda;
 import br.com.cin.sitcon.model.ItemNecessidadeEssencial;
 
@@ -25,6 +28,8 @@ import br.com.cin.sitcon.model.Setor;
 import br.com.cin.sitcon.model.Situacao;
 import br.com.cin.sitcon.model.dto.NecessidadeDTO;
 import br.com.cin.sitcon.repository.DodRepository;
+import br.com.cin.sitcon.service.DemandaService;
+import br.com.cin.sitcon.session.TabelaITensPacAdicionados;
 import br.com.cin.sitcon.session.TabelaNecessidadesAdicionadas;
 import br.com.cin.sitcon.session.TabelaObjetivosAdicionados;
 
@@ -39,11 +44,18 @@ public class DodController {
 	TabelaNecessidadesAdicionadas necessidades;
 	@Autowired
 	TabelaObjetivosAdicionados objetivos;
+	@Autowired
+	TabelaITensPacAdicionados itensPac;
+	@Autowired
+	DemandaService demandaService;
+	
+	private String erros;
 
 	@RequestMapping("/novo")
 	public ModelAndView novo(Demanda demanda) {
 		ModelAndView view = new ModelAndView("demanda/cadastroDemanda");
 		view.addObject("demanda", demanda);
+		view.addObject("pendentes", demandaService.getDemandasPendentes().size());
 		view.addObject("setores", Setor.values());
 		if (demanda.getId() == null) {
 			this.necessidades.limpar();
@@ -51,10 +63,39 @@ public class DodController {
 		return view;
 	}
 
-	@RequestMapping("/view")
+	/**@RequestMapping("/view")
 	public ModelAndView resumo() {
 		ModelAndView view = new ModelAndView("/demanda/pesquisar");
 		view.addObject("demandas", this.dodRepository.findAll());
+		view.addObject("pendentes", demandaService.getDemandasPendentes().size());
+		return view;
+
+	}***/
+	
+	@RequestMapping("/pendentes")
+	public ModelAndView demandasPendentes() {
+		ModelAndView view = new ModelAndView("/demanda/pesquisarDemandasPendentes");
+		view.addObject("demandas", this.demandaService.getDemandasPendentes());
+		view.addObject("pendentes", demandaService.getDemandasPendentes().size());
+		return view;
+
+	}
+	
+	@RequestMapping("/criadas")
+	public ModelAndView demandasCriadas() {
+		ModelAndView view = new ModelAndView("/demanda/pesquisarDemandasCriadas");
+		view.addObject("demandas", this.demandaService.getDemandasNovas());
+		view.addObject("criadas", demandaService.getDemandasNovas().size());
+		view.addObject("demandasAjustes", this.demandaService.getDemandasParaAjustes());
+		return view;
+
+	}
+	
+	@RequestMapping("/aprovadas")
+	public ModelAndView demandasAprovadas() {
+		ModelAndView view = new ModelAndView("/demanda/pesquisar");
+		view.addObject("demandas", this.demandaService.getDemandasPendentes());
+		view.addObject("pendentes", demandaService.getDemandasPendentes().size());
 		return view;
 
 	}
@@ -69,6 +110,7 @@ public class DodController {
 
 		demanda.adicionarItensNecessidades(this.necessidades.getItens());
 		demanda.adicionarItensObjetivos(this.objetivos.getItens());
+		demanda.adicionarItensPac(this.itensPac.getItens());
 		demanda.setSituacao(Situacao.NOVO.getDescricao());
 		dodRepository.save(demanda);
 		attributes.addFlashAttribute("message", "Documento Cadastrado com sucesso!");
@@ -92,13 +134,80 @@ public class DodController {
 		return view;
 
 	}
+	
+	@GetMapping("/addItemPac/{nome}")
+	public ModelAndView adicionarItemPac(@PathVariable("nome") String nome) {
+		this.itensPac.adicionarItemPac(nome);
+		ModelAndView view = new ModelAndView("demanda/TabelaPAC");
+		view.addObject("itens", this.itensPac.getItens());
+		return view;
+
+	}
+	
+	@RequestMapping("/validadeItemPAC")
+	public ModelAndView validadeItens() {
+		this.erros = 
+		"Não Foi Informado Nenhum Item!";
+		ModelAndView view = new ModelAndView("fragments/MensagemErro");
+		view.addObject("message",this.erros);
+		this.erros = new String();
+		return view;
+
+	}
+	
+	@RequestMapping("**/limparValidate")
+	public ModelAndView limparValidacao() {
+		ModelAndView view = new ModelAndView("fragments/MensagemErro");
+		this.erros = null;
+		view.addObject("message",this.erros);
+		return view;
+
+	}
+	
+	
+	
+	@GetMapping("/view/{id}")
+	public ModelAndView visualizar(@PathVariable("id") Integer id) {
+		Demanda demanda = this.dodRepository.findById(id).get();
+		ModelAndView view = new ModelAndView("demanda/viewDemandaNova");
+		view.addObject("demanda", demanda);
+		return view;
+
+	}
+	
+	@GetMapping("/devolverParaAjustes/{id}")
+	public ModelAndView devolverDemanda(@PathVariable("id") Integer id) {
+		Demanda demanda = this.dodRepository.findById(id).get();
+		demanda.setSituacao(Situacao.ENCAMINHADO_PARA_AJUSTES.getDescricao());
+		dodRepository.save(demanda);
+		
+		return demandasPendentes();
+
+	}
 
 	@GetMapping("/enviarTIC/{id}")
 	public ModelAndView enviarParaTic(@PathVariable("id") Integer id) {
 		Demanda demanda = this.dodRepository.findById(id).get();
 		demanda.setSituacao(Situacao.ENVIADO_PARA_TIC.getDescricao());
 		this.dodRepository.save(demanda);
-		return resumo();
+		return demandasCriadas();
+
+	}
+	
+	@GetMapping("/avaliarDOD/{id}")
+	public ModelAndView avaliarConformidadeDOD(@PathVariable("id") Integer id) {
+		Demanda demanda = this.dodRepository.findById(id).get();
+		AvaliacaoDOD avaliacao = new AvaliacaoDOD();
+		avaliacao.setDemanda(demanda);
+		
+		ModelAndView view = new ModelAndView("demanda/avaliacaoDemanda");
+		view.addObject("demanda",demanda);
+		avaliacao.setObjetivoEstrategicos(demanda.getObjetivos());
+		avaliacao.avaliarConsitenciaTexto(demanda.getObjetivos());
+		avaliacao.avaliarConsitenciaTextoNecessidade(demanda.getNecessidades());
+		view.addObject("objetivos",avaliacao.getObjetivoEstrategicos());
+		view.addObject("necessidades", demanda.getNecessidades());
+		return view;
 
 	}
 
