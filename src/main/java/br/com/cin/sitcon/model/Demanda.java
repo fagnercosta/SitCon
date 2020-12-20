@@ -43,6 +43,8 @@ public class Demanda implements Serializable {
     
     @Column(name = "justificativa")
     private String justificativa;
+    @Transient
+    private boolean justificativaConsistente;
     
     
 	//@NotNull(message = "Campo Responsável é obriogatorio!")
@@ -156,6 +158,10 @@ public class Demanda implements Serializable {
 	public void adicionarItensPac(List<ItemPAC> itens) {
 		this.itensPAC = itens;
 		this.itensPAC.forEach(a -> a.setDemanda(this));
+	}
+	
+	public boolean isJusttificativaConsistente() {
+		return !this.justificativa.isEmpty();
 	}
     
     

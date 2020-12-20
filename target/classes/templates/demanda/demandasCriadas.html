@@ -24,7 +24,7 @@
 						<div class="aw-page-header-controls">
 							<div class="btn-group" role="group" aria-label="Basic example">
 								<a class="btn  btn-danger" th:href="@{/demanda/criadas}">
-									Minhas Demandas <span class="badge" th:text="${criadas}"></span>
+									Demandas do Setor 
 								</a>
 
 
@@ -84,6 +84,7 @@
 									<td class="text-left" th:text="${d.responsavel}"></td>
 									<td class="text-left" th:text="${d.setor}"></td>
 									<td class="text-left" th:text="${d.situacao}"></td>
+									
 									<td class="text-left"><a class="btn btn-success"
 										th:href="@{/demanda/view/{id}(id=${d.id})}"> Visualizar</a></td>
 
@@ -144,6 +145,8 @@
 									<td class="text-left" th:text="${d.responsavel}"></td>
 									<td class="text-left" th:text="${d.setor}"></td>
 									<td class="text-left" th:text="${d.situacao}"></td>
+									<td class="text-left"><a 
+										th:href="@{/demanda/view/{id}(id=${d.id})}"> Ajustar</a></td>
 									<td class="text-left"><a 
 										th:href="@{/demanda/view/{id}(id=${d.id})}"> Visualizar</a></td>
 

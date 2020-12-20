@@ -115,7 +115,7 @@
 								<tbody>
 									<tr>
 										<td><span th:text="${demanda.justificativa}"
-											style="font-size: 20px"></span></td>
+											></span></td>
 
 										<td><span>Art. 10. A fase de
 												Planejamento da Contratação terá início com o recebimento
@@ -123,6 +123,10 @@
 												elaborado pela Área Requisitante da solução, que conterá no
 												mínimo: II - explicitação da motivação e dos resultados a
 												serem alcançados com a contratação da solução de TIC;</span></td>
+										<td th:if="${demanda.justtificativaConsistente}" >
+												<i
+											class="glyphicon glyphicon-ok" style="color: green;">SIM</i>
+										</td>
 
 									</tr>
 								</tbody>
