@@ -43,7 +43,7 @@ public class PACController {
 	@RequestMapping("/view")
 	public ModelAndView resumo() {
 		ModelAndView view = new ModelAndView("pac/resumo");
-		view.addObject("itensPac",this.pacRepository.findAll());
+		view.addObject("itenspac",this.pacRepository.findAll());
 		return view;
 		
 	}

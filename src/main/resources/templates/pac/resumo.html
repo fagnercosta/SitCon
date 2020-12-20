@@ -49,15 +49,15 @@
 				</thead>
 				
 				<tbody>
-					<tr th:each="item : ${itensPac}">
+					<tr th:each="item : ${itenspac}">
 						<td class="text-left" th:text="${item.id}"></td>		
 						<td class="text-left" th:text="${item.tipoItem}"></td>
 						<td class="text-letf" th:text="${item.subTipo}"></td>	
 						<td class="text-left" th:text="${item.descricaoDetalhada}"></td>
 											
 					</tr>
-					<tr th:if="${#lists.isEmpty(itensPac)">
-						<td colspan="7">Nenhum item encontrado!</td>
+					<tr th:if="${#lists.isEmpty(itenspac)}">
+						<td colspan="7">Nenhum item encontrado</td>
 					</tr>
 				</tbody>
 			</table>
