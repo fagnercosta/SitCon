@@ -83,7 +83,7 @@ public class DodController {
 	
 	@RequestMapping("/criadas")
 	public ModelAndView demandasCriadas() {
-		ModelAndView view = new ModelAndView("/demanda/pesquisarDemandasCriadas");
+		ModelAndView view = new ModelAndView("demanda/demandasCriadas");
 		view.addObject("demandas", this.demandaService.getDemandasNovas());
 		view.addObject("criadas", demandaService.getDemandasNovas().size());
 		view.addObject("demandasAjustes", this.demandaService.getDemandasParaAjustes());
