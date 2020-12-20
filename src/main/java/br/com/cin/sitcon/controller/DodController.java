@@ -74,7 +74,7 @@ public class DodController {
 	
 	@RequestMapping("/pendentes")
 	public ModelAndView demandasPendentes() {
-		ModelAndView view = new ModelAndView("/demanda/pesquisarDemandasPendentes");
+		ModelAndView view = new ModelAndView("demanda/pesquisarDemandasPendentes");
 		view.addObject("demandas", this.demandaService.getDemandasPendentes());
 		view.addObject("pendentes", demandaService.getDemandasPendentes().size());
 		return view;
@@ -93,7 +93,7 @@ public class DodController {
 	
 	@RequestMapping("/aprovadas")
 	public ModelAndView demandasAprovadas() {
-		ModelAndView view = new ModelAndView("/demanda/pesquisar");
+		ModelAndView view = new ModelAndView("demanda/pesquisar");
 		view.addObject("demandas", this.demandaService.getDemandasPendentes());
 		view.addObject("pendentes", demandaService.getDemandasPendentes().size());
 		return view;
