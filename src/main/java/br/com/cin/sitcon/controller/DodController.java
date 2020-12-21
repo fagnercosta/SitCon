@@ -99,6 +99,15 @@ public class DodController {
 		return view;
 
 	}
+	
+	@RequestMapping("/recomendacao/{id}")
+	public ModelAndView viewRecomendao(@PathVariable("id") Integer id) {
+		ModelAndView view = new ModelAndView("demanda/viewOrientacao");
+		Demanda demanda = dodRepository.findById(id).get();
+		view.addObject("demanda", demanda);	
+		return view;
+
+	}
 
 	@RequestMapping(value = "/novo", method = RequestMethod.POST)
 	public ModelAndView cadastrar(@Valid Demanda demanda, BindingResult result, Model model,
@@ -116,6 +125,18 @@ public class DodController {
 		attributes.addFlashAttribute("message", "Documento Cadastrado com sucesso!");
 		return new ModelAndView("redirect:/demanda/novo");
 	}
+	
+	@RequestMapping(value = "/addOrientacao", method = RequestMethod.POST)
+	public ModelAndView addOrientacao(@Valid Demanda demanda, BindingResult result, Model model,
+			RedirectAttributes attributes) {
+		demanda.setSituacao(Situacao.ENCAMINHADO_PARA_AJUSTES.getDescricao());
+		dodRepository.save(demanda);
+		
+		return demandasPendentes();
+	}
+	
+	
+	
 
 	@GetMapping("/addNecessidade/{nome}")
 	public ModelAndView adicionarNecessidade(@PathVariable("nome") String nome) {
@@ -144,6 +165,8 @@ public class DodController {
 
 	}
 	
+	
+	
 	@RequestMapping("/validadeItemPAC")
 	public ModelAndView validadeItens() {
 		this.erros = 
@@ -151,6 +174,16 @@ public class DodController {
 		ModelAndView view = new ModelAndView("fragments/MensagemErro");
 		view.addObject("message",this.erros);
 		this.erros = new String();
+		return view;
+
+	}
+	
+	@RequestMapping("/entrarTelaAvalicao/{id}")
+	public ModelAndView entrarTelaAddOcorrencia(@PathVariable("id") Integer id) {
+		ModelAndView view = new ModelAndView("demanda/formAvaliacao");
+		Demanda demanda = dodRepository.findById(id).get();	
+		view.addObject("demanda", demanda);
+		view.addObject("setores", Setor.values());
 		return view;
 
 	}
@@ -171,6 +204,10 @@ public class DodController {
 		Demanda demanda = this.dodRepository.findById(id).get();
 		ModelAndView view = new ModelAndView("demanda/viewDemandaNova");
 		view.addObject("demanda", demanda);
+		view.addObject("objetivos",demanda.getObjetivos());
+		view.addObject("necessidades",demanda.getNecessidades());
+		view.addObject("itenspac",demanda.getItensPAC());
+		
 		return view;
 
 	}

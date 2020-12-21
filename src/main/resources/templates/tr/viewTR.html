@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="'layout/LayoutPadrao'">
+
+<head>
+
+</head>
+
+<body>
+	<section layout:fragment="conteudo">
+		<div class="page-header">
+			<div class="container-fluid">
+
+				
+				<div class="row">
+					<div class="col-sm-8">
+						<h1 style="font-size: 40px">Termo de Referencia</h1>
+					</div>
+
+					<div class="col-sm-4">
+						<div class="aw-page-header-controls">
+							<div class="btn-group" role="group" aria-label="Basic example">
+								<a class="btn  btn-success" th:href="@{/projeto/list}">
+									Termos de Referençia <span class="badge" th:text="${criadas}"></span>
+								</a>
+
+
+							</div>
+
+
+						</div>
+
+					</div>
+
+
+
+				</div>
+
+				<div class="row"></div>
+
+			</div>
+		</div>
+
+		<div class="container-fluid" align="center"
+			style="font-family: serif; width: 80%">
+
+			<div class="row">
+				<h1 style="font-size: 50px">Termo de Referençia</h1>
+				<br />
+			</div>
+
+
+				
+				
+
+			<div class="row">
+				<div class="col-sm-12" align="left">
+					<div class="col-sm-12">
+						<h1 style="font-size: 20px; font-weight: bold;">1. OBJETO DA
+							CONTRATAÇÃO</h1>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-12" align="left">
+					<div class="col-sm-12">
+						<span th:text="${termo.objetoContratacao}" style="font-size: 20px"></span>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-12" align="left">
+					<div class="col-sm-12">
+						<h1 style="font-size: 20px; font-weight: bold;">2. JUSTIFICATIVA DA CONTRATAÇÃO</h1>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-12" align="left">
+					<div class="col-sm-12">
+						<h2 style="font-size: 20px; font-weight: bold;">2.1 Objetivo Estratégio PDTIC</h2>
+					</div>
+				</div>
+			</div>
+
+			<div class="container-fluid">
+
+				<div class="table-responsive  bw-tabela-simples">
+					<div class="container-fluid">
+
+						<div class="table-responsive  bw-tabela-simples">
+							<table class="table  table-hover">
+								<thead>
+									<tr th:if="${not #lists.isEmpty(objetivos)}">
+
+										<th>ID#</th>
+										<th>Objetivo</th>
+										
+									</tr>
+									
+									
+								</thead>
+
+								<tbody>
+									<tr th:if="${not #lists.isEmpty(objetivos)}" th:each="o : ${objetivos}">
+										<td th:text="${o.id}"></td>
+										<td th:text="${o.descricaoObjetivo}"></td>
+										
+									</tr>
+									
+								</tbody>
+								<tfoot th:if="${#lists.isEmpty(objetivos)}">
+									<tr>
+										<td>
+											<span style="color: red">Objetivos Estratégicos não informados...</span>
+										</td>
+									</tr>
+								</tfoot>
+							</table>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			
+			
+			<div class="row">
+				<div class="col-sm-12" align="left">
+					<div class="col-sm-12">
+						<h2 style="font-size: 20px; font-weight: bold;">2.1 Necessidade Essenciais PDTIC</h2>
+					</div>
+				</div>
+			</div>
+
+			<div class="container-fluid">
+
+				<div class="table-responsive  bw-tabela-simples">
+					<div class="container-fluid">
+
+						<div class="table-responsive  bw-tabela-simples">
+							<table class="table  table-hover">
+								<thead>
+									<tr th:if="${not #lists.isEmpty(necessidades)}">
+
+										<th>ID#</th>
+										<th>Necessidade</th>
+										
+									</tr>
+									
+									
+								</thead>
+
+								<tbody>
+									<tr th:if="${not #lists.isEmpty(necessidades)}" th:each="n : ${necessidades}">
+										<td th:text="${n.id}"></td>
+										<td th:text="${n.descricaoDetalhada}"></td>
+										
+									</tr>
+									
+								</tbody>
+								<tfoot th:if="${#lists.isEmpty(necessidades)}">
+									<tr>
+										<td>
+											<span style="color: red">Necessidades não informadas...</span>
+										</td>
+									</tr>
+								</tfoot>
+							</table>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-12" align="left">
+					<div class="col-sm-12">
+						<span th:text="${termo.justificativa}" style="font-size: 20px"></span>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-12" align="left">
+					<div class="col-sm-12">
+						<h1 style="font-size: 20px; font-weight: bold;">3. REQUISITOS DA CONTRATAÇÃO</h1>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-12" align="left">
+					<div class="col-sm-12">
+						<span th:text="${termo.requisitos}" style="font-size: 20px"></span>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-12" align="left">
+					<div class="col-sm-12">
+						<h1 style="font-size: 20px; font-weight: bold;">4. DESCRIÇÃO DA SOLUÇAO</h1>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-12" align="left">
+					<div class="col-sm-12">
+						<span th:text="${termo.descricaoSolucao}" style="font-size: 20px"></span>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+
+
+	</section>
+
+
+
+	<th:block layout:fragment="javascript-extra">
+		<script
+			th:src="@{/layout/javascripts/demanda/demanda.adicionar.objetivo.js}"></script>
+		<script>
+			$('.js-abas-demanda a').click(function(e) {
+				e.preventDefault();
+				$('#form-demanda .active').removeClass('active');
+				$(this).parent().addClass('active');
+				$($(this).attr('href')).addClass('active');
+				$(this).tab('show');
+			});
+
+			$(document).on(
+					"click",
+					".bnt-necessidade",
+					function() {
+						var link = $('.btn-add').attr('data-href');
+						var nomeNecessidade = $('.js-descricao-necessidade')
+								.val().replace('/', " ");
+						;
+
+						var action = link + "/" + nomeNecessidade
+
+						$.ajax({
+							url : action,
+							type : "GET",
+
+							success : function(resposta) {
+
+								$('.js-tabela-necessidades-container').html(
+										resposta);
+								$('.js-descricao-necessidade').val("");
+
+							}
+						})
+
+					});
+
+			$(document).on("click", ".bnt-objetivo", function() {
+				var link = $('.btn-add-obj').attr('data-href');
+				var nomeObjetivo = $('.js-descricao-objetivo-input').val();
+
+				var action = link + "/" + nomeObjetivo
+
+				$.ajax({
+					url : action,
+					type : "GET",
+
+					success : function(resposta) {
+
+						$('.js-tabela-objetivos-container').html(resposta);
+						$('.js-descricao-objetivo-input').val("");
+
+					}
+				})
+
+			});
+		</script>
+
+		<script
+			th:src="@{/layout/javascripts/demanda/demanda.adicionar.objetivo.js}"></script>
+
+
+
+
+
+	</th:block>
+
+
+
+
+
+</body>
+
+
+
+
+
+</html>

@@ -1,0 +1,25 @@
+
+<div class="table-responsive  bw-tabela-simples">
+	<table class="table  table-hover">
+		<thead>
+			<tr>
+
+
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr th:each="necessidade : ${itens}">
+				<td><span style="font-weight: bold;"
+					th:text="${necessidade.descricaoDetalhada}"></span></td>
+				<td class="text-center"><a class="btn  btn-link  btn-xs"
+					title="Editar"> <i class="glyphicon glyphicon-pencil"></i>
+				</a> <a th:href="@{/demanda/removerNecessidade/{nome}(nome=${necessidade.descricaoDetalhada})}" class="btn  btn-link  btn-xs" title="Excluir"> <i
+						class="glyphicon glyphicon-remove"></i>
+				</a></td>
+			</tr>
+
+		</tbody>
+
+	</table>
+</div>

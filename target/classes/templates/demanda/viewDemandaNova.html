@@ -15,24 +15,11 @@
 
 
 				<div class="row">
-					<div class="col-sm-8">
+					<div class="col-sm-10">
 						<h1 style="font-size: 40px">Avaliação De Demanda</h1>
 					</div>
 
-					<div class="col-sm-4">
-						<div class="aw-page-header-controls">
-							<div class="btn-group" role="group" aria-label="Basic example">
-								<a class="btn  btn-danger" th:href="@{/demanda/criadas}">
-									Minhas DemandaS <span class="badge" th:text="${criadas}"></span>
-								</a>
-
-
-							</div>
-
-
-						</div>
-
-					</div>
+					
 
 
 
@@ -57,7 +44,7 @@
 
 				<div class="col-sm-4" align="left">
 
-					<table>
+					<table >
 						<tr>
 							<td align="right" style="font-weight: bold;">RESPONSÁVEL:</td>
 							<td align="left" th:text="${demanda.responsavel}"
@@ -67,6 +54,18 @@
 							<td align="right" style="font-weight: bold;">SETOR
 								REQUISITANTE :</td>
 							<td align="left" th:text="${demanda.setor}"
+								style="font-size: 20px; padding: 5px; font-family: serif;"></td>
+						</tr>
+						
+						<tr>
+							<td align="right" style="font-weight: bold;">E-MAIL :</td>
+							<td align="left" th:text="${demanda.emailResponsavel}"
+								style="font-size: 20px; padding: 5px; font-family: serif;"></td>
+						</tr>
+						
+						<tr>
+							<td align="right" style="font-weight: bold;">SIAPE :</td>
+							<td align="left" th:text="${demanda.siapeResponsavel}"
 								style="font-size: 20px; padding: 5px; font-family: serif;"></td>
 						</tr>
 
@@ -103,7 +102,15 @@
 			<div class="row">
 				<div class="col-sm-12" align="left">
 					<div class="col-sm-12">
-						<h2 style="font-size: 20px; font-weight: bold;">2.1. Objetivo Estratégio PDTIC</h2>
+						<span th:text="${demanda.justificativa}" style="font-size: 20px"></span>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-12" align="left">
+					<div class="col-sm-12">
+						<h2 style="font-size: 20px; font-weight: bold;">2.1 Objetivos Estratégios PDTIC</h2>
 					</div>
 				</div>
 			</div>
@@ -116,19 +123,19 @@
 						<div class="table-responsive  bw-tabela-simples">
 							<table class="table  table-hover">
 								<thead>
-									<tr th:if="${not #lists.isEmpty(objetivos)}">
-
-										<th>ID#</th>
-										<th>Objetivo</th>
-										
+									<tr th:if="${not #lists.isEmpty(objetivos)}">								
+										<th>Objetivo</th>										
 									</tr>
 									
 									
 								</thead>
 
 								<tbody>
-									<tr th:if="${not #lists.isEmpty(objetivos)}" th:each="o : ${objetivos}">
-										<td></td>
+									<tr th:if="${ lists.isEmpty(objetivos)}" th:each="o : ${objetivos}">
+										<td>
+											<span>Objetivos Estratégicos.. Não Informado</span>
+										</td>
+										
 									</tr>
 									
 								</tbody>
@@ -160,9 +167,7 @@
 										<th>ID#</th>
 										<th>Necessidade</th>
 										<th>Objetivo Estratégico</th>
-										
-										
-
+								
 									</tr>
 									
 									

@@ -1,0 +1,77 @@
+<div class="modal-dialog modal-lg " role="document">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h1 class="modal-title" id="exampleModalLabel"></h1>
+			<button type="button" class="close" data-dismiss="modal"
+				aria-label="Fechar">
+				<span aria-hidden="true">&times;</span>
+			</button>
+		</div>
+		<div class="modal-body">
+			<form th:action="@{/demanda/addOrientacao}" th:object="${demanda}"
+				method="POST" id="form-demanda">
+
+				<div class="row" hidden="">
+					<div class="col-sm-2  form-group">
+						<label for="id" class="control-label">Id</label> <input
+							id="responsavel" type="text" class="form-control"
+							th:field="*{id}" autocomplete="off" />
+					</div>
+
+					<div class="col-sm-4  form-group">
+						<label for="descricao" class="control-label">Responsável</label> <input
+							id="responsavel" type="text" class="form-control"
+							th:field="*{responsavel}" autocomplete="off" />
+					</div>
+
+					<div class="col-sm-6 form-group">
+						<label for="setor">Setor Requisitante</label> <select id="estilo"
+							class="form-control" th:field="*{setor}">
+							<option value="">Selecione o setor</option>
+							<option th:each="setor : ${setores}" th:value="${setor}"
+								th:text="${setor.descricao}"></option>
+						</select>
+
+
+					</div>
+
+
+				</div>
+
+
+				<div class="row" hidden="">
+					<div class="form-group col-sm-12">
+						<label for="apontamentos">Adicionar Orientações</label>
+						<textarea class="form-control" id="objeto" rows="3"
+							th:field="*{apontamentos}"></textarea>
+					</div>
+				</div>
+				
+				<div class="row" hidden="">
+					<div class="form-group col-sm-12">
+						<label for="objeto">Objeto da Contratação</label>
+						<textarea class="form-control" id="objeto" rows="3"
+							th:field="*{objeto}"></textarea>
+					</div>
+				</div>
+
+				<div class="row" hidden="">
+					<div class="form-group col-sm-12">
+						<label for="justificativa">Justificativa</label>
+						<textarea class="form-control" id="objeto" rows="3"
+							th:field="*{justificativa}"></textarea>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<button class="btn  btn-primary" type="submit">Cadastar
+						Documento</button>
+					<a class="btn  btn-danger" data-dismiss="modal">Cancelar</a>
+				</div>
+
+			</form>
+
+		</div>
+
+	</div>
+</div>

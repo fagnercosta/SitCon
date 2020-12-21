@@ -19,7 +19,7 @@
 
 					<div class="col-sm-2">
 						<div class="aw-page-header-controls">
-							<a class="btn  btn-default" th:href="@{/demanda/view}"> <i
+							<a class="btn  btn-default" th:href="@{/projeto/list}"> <i
 								class="glyphicon  glyphicon-search"></i> <span
 								class="hidden-xs  hidden-sm">Visualisar Termos de
 									Referências!</span>
@@ -34,12 +34,24 @@
 		<div class="container-fluid">
 
 
-			<form method="POST" id="form-tr">
-			
+			<form th:action="@{/projeto/novo}" th:object="${termo}" method="POST" id="form-tr">
+
+				<th:block th:include="fragments/MensagensErroValidacao"></th:block>
+				<th:block th:include="fragments/MensagemSucesso"></th:block>
+
 				<div class="row">
 					<div class="col-sm-12 form-group">
-						<label for="justificativa">Objeto da Contratação</label> 
-						<textarea class="form-control" id="objeto" rows="3"></textarea>
+						<label for="objetoContratacao">Objeto da Contratação</label>
+						<textarea class="form-control" id="objetoContratacao" rows="3" th:field="*{justificativa}"></textarea>
+
+
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-sm-12 form-group">
+						<label for="justificativa">Justificativa da Contratação</label>
+						<textarea class="form-control" id="justificativa" rows="3" th:field="*{objetoContratacao}"></textarea>
 
 
 					</div>
@@ -49,43 +61,33 @@
 				<div class="row">
 					<div class="form-group  col-lg-12">
 						<ul class="nav nav-tabs  js-abas-tr">
-							<li role="presentation" class="active"><a href="#pac">Justificativa
-									Contratação</a></li>
+
+
+							<li role="presentation" class="active"><a href="#objetivos">Objetivos</a></li>
+
+							<li role="presentation" ><a
+								href="#necessidades">Necessidade Contratação</a></li>
 						</ul>
 					</div>
 				</div>
 
 				<div class="tab-content">
-					<div class="tab-pane active" id="pac">
-						<div class="row">
-							<div class="col-sm-12  form-group">
-								<label for="justificativa" class="control-label">Descrição do
-									Justificativa</label>
-								<textarea class="form-control" id="jsutificativa" rows="3"></textarea>
-							</div>
 
-						</div>
-
+					<div class="tab-pane active" id="objetivos">
 						<div class="row">
-							<div class="col-sm-6  form-group">
-								<label for="descri_catalogo" class="control-label">Descrição</label> <input
-									id="justificativa" type="text" class="form-control"
-									autocomplete="off" />
-							</div>
-							
-							<div class="col-sm-3  form-group">
-								<label for="cod_catalogo" class="control-label">CATMA/CATSER</label> <input
-									id="cod_catalogo" type="text" class="form-control"
-									autocomplete="off" />
-							</div>
-							
-							<div class="col-sm-3  form-group">
-								<label for="quantidade" class="control-label">Quantidade</label> <input
-									id="quantidade" type="text" class="form-control"
-									autocomplete="off" />
+							<div class="form-group  col-lg-12">
+								<label for="curso" class="control-label tab-pane-label">Objetivo:</label>
+								<div class="bw-field-action">
+									<input type="text"
+										class="form-control js-descricao-objetivo-input" id="objetivo">
+									<div class="bw-field-action__icon bnt-objetivo">
+										<a data-href="/projeto/addObjetivo" class="btn-add-obj"> <i
+											class="glyphicon  glyphicon-plus-sign  bw-glyphicon-large"></i>
+										</a>
+									</div>
+								</div>
 							</div>
 						</div>
-
 
 
 						<div class="bw-tabela-cervejas  js-tabela-objetivos-container">
@@ -93,9 +95,60 @@
 
 							</table>
 						</div>
+					</div>
+
+
+
+
+					<div class="tab-pane" id="necessidades">
+						<div class="row">
+							<div class="form-group  col-lg-12">
+								<label for="avalicao" class="control-label tab-pane-label">Necessidade:</label>
+								<div class="bw-field-action">
+									<input type="text"
+										class="form-control js-descricao-necessidade" id="necessidade">
+									<div class="bw-field-action__icon bnt-necessidade">
+										<a data-href="/projeto/addNecessidade" class="btn-add"> <i
+											class="glyphicon  glyphicon-plus-sign  bw-glyphicon-large"></i>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+
+						<div id="tabelaNecessidade"
+							class="bw-tabela-cervejas  js-tabela-necessidades-container">
+							<table>
+
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-sm-12 form-group">
+						<label for="descricaoSolucao">Descrição da Solução de TIC</label>
+						<textarea class="form-control" id="descricaoSolucao" rows="3" th:field="*{descricaoSolucao}"></textarea>
+
 
 					</div>
 				</div>
+				
+				<div class="row">
+					<div class="col-sm-12 form-group">
+						<label for="requisitos">Descrição da Solução de TIC</label>
+						<textarea class="form-control" id="requisitos" rows="3" th:field="*{requisitos}"></textarea>
+
+
+					</div>
+				</div>
+				
+				
+				
+
+
 
 
 
@@ -117,6 +170,123 @@
 
 
 	<th:block layout:fragment="javascript-extra">
+		<script
+			th:src="@{/layout/javascripts/demanda/demanda.adicionar.objetivo.js}"></script>
+		<script>
+			$('.js-abas-tr a').click(function(e) {
+				e.preventDefault();
+				$('#form-tr .active').removeClass('active');
+				$(this).parent().addClass('active');
+				$($(this).attr('href')).addClass('active');
+				$(this).tab('show');
+			});
+
+			$(document).on(
+					"click",
+					".bnt-necessidade",
+					function() {
+						var link = $('.btn-add').attr('data-href');
+						var nomeNecessidade = $('.js-descricao-necessidade')
+								.val().replace('/', " ");
+						;
+
+						var action = link + "/" + nomeNecessidade
+
+						$.ajax({
+							url : action,
+							type : "GET",
+
+							success : function(resposta) {
+
+								$('.js-tabela-necessidades-container').html(
+										resposta);
+								$('.js-descricao-necessidade').val("");
+
+							}
+						})
+
+					});
+
+			$(document).on("click", ".bnt-objetivo", function() {
+				var link = $('.btn-add-obj').attr('data-href');
+				var nomeObjetivo = $('.js-descricao-objetivo-input').val();
+
+				var action = link + "/" + nomeObjetivo
+
+				$.ajax({
+					url : action,
+					type : "GET",
+
+					success : function(resposta) {
+
+						$('.js-tabela-objetivos-container').html(resposta);
+						$('.js-descricao-objetivo-input').val("");
+
+					}
+				})
+
+			});
+
+			$(document).on(
+					"click",
+					".bnt-pac",
+					function() {
+						var link = $('.btn-add-pac').attr('data-href');
+						var nomeItemPac = $('.js-descricao-pac-input').val();
+						console.log("Entrou Aqui.....")
+						var action = link + "/" + nomeItemPac
+						var actionValidade = $('.btn-add-pac').attr(
+								'data-href-validade');
+
+						if ($('.js-descricao-pac-input').val() == "") {
+							$.ajax({
+								url : actionValidade,
+								type : "GET",
+
+								success : function(resposta) {
+
+									$('.js-validade-container').html(resposta);
+
+								}
+							})
+						} else {
+							$.ajax({
+								url : action,
+								type : "GET",
+
+								success : function(resposta) {
+
+									$('.js-tabela-pac-container')
+											.html(resposta);
+									$('.js-descricao-pac-input').val("");
+									limpar();
+
+								}
+							})
+						}
+
+						function limpar() {
+							$.ajax({
+								url : "demanda/limparValidate",
+								type : "GET",
+
+								success : function(resposta) {
+
+									$('.js-validade-container').html(resposta);
+
+								}
+							})
+						}
+
+					});
+		</script>
+
+		<script
+			th:src="@{/layout/javascripts/demanda/demanda.adicionar.objetivo.js}"></script>
+
+
+
+
 
 	</th:block>
 

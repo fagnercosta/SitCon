@@ -44,6 +44,7 @@ public class PACController {
 	public ModelAndView resumo() {
 		ModelAndView view = new ModelAndView("pac/resumo");
 		view.addObject("itenspac",this.pacRepository.findAll());
+		
 		return view;
 		
 	}

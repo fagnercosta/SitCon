@@ -20,6 +20,8 @@ import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.lang.NonNull;
 import org.thymeleaf.expression.Sets;
 
+import groovy.transform.AnnotationCollector;
+
 
 
 
@@ -55,6 +57,15 @@ public class Demanda implements Serializable {
 	@NotBlank(message = "Campo Setor sResponsável é obriogatorio!")
     @Column(name = "setorResponsavel")
     private String setor;
+	@Column(name = "emailResponsavel")
+	private String emailResponsavel;
+	@Column(name = "siapeResponsavel")
+	private String siapeResponsavel;
+	
+	@Column(name = "apontamentos", length =  5000)
+	private String apontamentos;
+	@Transient
+	private boolean apontamantoExiste;
 	
 	@OneToMany(mappedBy = "demanda", cascade = CascadeType.ALL,orphanRemoval = true)
 	private List<ItemObjetivoEstrategico> objetivos = new ArrayList<ItemObjetivoEstrategico>();
@@ -69,6 +80,14 @@ public class Demanda implements Serializable {
 		this.id = id;
 	}
     
+    public void setApontamentos(String apontamentos) {
+		this.apontamentos = apontamentos;
+	}
+    
+    public String getApontamentos() {
+		return apontamentos;
+	}
+    
     public String getSituacao() {
 		return situacao;
 	}
@@ -77,7 +96,41 @@ public class Demanda implements Serializable {
 		this.situacao = situacao;
 	}
     
-    public Integer getId() {
+    
+    
+    public boolean isJustificativaConsistente() {
+		return justificativaConsistente;
+	}
+    
+    public boolean isApontamantoExiste() {
+		try {
+			return this.apontamentos.isEmpty();
+		} catch (Exception e) {
+			return false;
+		}
+	}
+
+	public void setJustificativaConsistente(boolean justificativaConsistente) {
+		this.justificativaConsistente = justificativaConsistente;
+	}
+
+	public String getEmailResponsavel() {
+		return emailResponsavel;
+	}
+
+	public void setEmailResponsavel(String emailResponsavel) {
+		this.emailResponsavel = emailResponsavel;
+	}
+
+	public void setSiapeResponsavel(String siapeResponsavel) {
+		this.siapeResponsavel = siapeResponsavel;
+	}
+	
+	public String getSiapeResponsavel() {
+		return siapeResponsavel;
+	}
+
+	public Integer getId() {
 		return id;
 	}
     
@@ -161,7 +214,12 @@ public class Demanda implements Serializable {
 	}
 	
 	public boolean isJusttificativaConsistente() {
-		return !this.justificativa.isEmpty();
+		try {
+			return !this.justificativa.isEmpty();
+		} catch (Exception e) {
+			return false;
+		}
+		
 	}
     
     

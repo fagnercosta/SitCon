@@ -9,12 +9,14 @@ import org.springframework.web.context.annotation.SessionScope;
 import br.com.cin.sitcon.model.Demanda;
 import br.com.cin.sitcon.model.ItemNecessidadeEssencial;
 import br.com.cin.sitcon.model.ItemObjetivoEstrategico;
+import br.com.cin.sitcon.model.TermoRereferencia;
 import br.com.cin.sitcon.similarity.CosineSimilarity;
 
 @SessionScope
 public class AvaliacaoDOD {
 	
 	private Demanda demanda;
+	private TermoRereferencia termo;
 	private boolean objetoConistente;
 	private boolean necessidadeConsistente;
 	private List<ItemNecessidadeEssencial> necessidades;
@@ -29,9 +31,19 @@ public class AvaliacaoDOD {
 		System.out.println("Demanda"+this.demanda.getResponsavel());
 	}
 	
+	public AvaliacaoDOD(TermoRereferencia termo) {
+		this.termo = termo;
+		System.out.println("Demanda"+this.termo.getObjetoContratacao());
+	}
+	
 	
 	public AvaliacaoDOD avalicao(Demanda demanda) {
 		this.setDemanda(demanda);
+		return this;
+	}
+	
+	public AvaliacaoDOD avalicao(TermoRereferencia termo) {
+		this.setTermo(termo);
 		return this;
 	}
 	
@@ -48,6 +60,14 @@ public class AvaliacaoDOD {
 	
 	public void setDemanda(Demanda demanda) {
 		this.demanda = demanda;
+	}
+	
+	public void setTermo(TermoRereferencia termo) {
+		this.termo = termo;
+	}
+	
+	public TermoRereferencia getTermo() {
+		return termo;
 	}
 	
 	public Demanda getDemanda() {

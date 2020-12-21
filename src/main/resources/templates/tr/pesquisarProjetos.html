@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="'layout/LayoutPadrao'">
+
+<head>
+
+</head>
+
+<body>
+	<section layout:fragment="conteudo">
+
+		<div class="page-header">
+			<div class="page-header">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-10">
+						<h1 style="font-size: 40px">Termo de Referêçia</h1>
+					</div>
+
+					<div class="col-sm-2">
+						<div class="aw-page-header-controls">
+							<a class="btn  btn-default" th:href="@{/projeto/novo}"> <i
+								class="glyphicon  glyphicon-search"></i> <span
+								class="hidden-xs  hidden-sm">Cadastrar Novo TR</span>
+							</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		</div>
+
+		<div class="container-fluid">
+
+			<div class="table-responsive  bw-tabela-simples">
+				<div class="container-fluid">
+
+					<div class="table-responsive  bw-tabela-simples">
+						<table class="table  table-hover">
+							<thead>
+								<tr>
+
+									<th>ID#</th>
+									<th>OBJETO</th>
+									<th>SITUAÇÃO</th>
+									<th></th>
+									<th></th>
+
+								</tr>
+							</thead>
+
+							<tbody>
+								<tr th:each="t : ${termos}">
+									<td class="text-left" th:text="${t.id}"></td>
+									<td class="text-left" th:text="${t.objetoContratacao}"></td>
+									<td th:if="${t.situacao == 'NOVO'}" class="text-left"
+									 style="color: green;" th:text="${t.situacao}"></td>
+									 
+									 <td th:if="${t.situacao == 'ENCAMINHADO PARA AJUSTES'}" class="text-left"
+									 style="color: orange;" th:text="${t.situacao}"></td>
+									
+									<td class="text-left"><a
+										th:href="@{/projeto/entrarTelaAvalicao/{id}(id=${t.id})}"> Avaliar</a></td>
+
+									<td class="text-left"><a
+										th:href="@{/projeto/view/{id}(id=${t.id})}">Visualizar</a></td>
+
+								</tr>
+								<tr th:if="${#lists.isEmpty(termos)}">
+									<td colspan="7">Nenhum item encontrado!</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+
+	</section>
+
+</body>
+
+
+
+
+
+</html>

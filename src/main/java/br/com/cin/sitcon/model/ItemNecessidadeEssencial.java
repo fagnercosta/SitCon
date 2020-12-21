@@ -34,6 +34,10 @@ public class ItemNecessidadeEssencial implements Serializable {
 	@JoinColumn(name = "id_demanda")
 	private Demanda demanda;
     
+    @ManyToOne
+   	@JoinColumn(name = "id_tr")
+   	private TermoRereferencia tr;
+    
     @Transient
     private boolean necessidadeInformada;
     @Transient
@@ -45,6 +49,14 @@ public class ItemNecessidadeEssencial implements Serializable {
 
 	public void setId(Integer id) {
 		this.id = id;
+	}
+	
+	public void setTr(TermoRereferencia tr) {
+		this.tr = tr;
+	}
+	
+	public TermoRereferencia getTr() {
+		return tr;
 	}
 
 	public String getDescricaoDetalhada() {

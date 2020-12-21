@@ -24,8 +24,7 @@
 						<div class="aw-page-header-controls">
 							<div class="btn-group" role="group" aria-label="Basic example">
 								<a class="btn  btn-danger" th:href="@{/demanda/criadas}">
-									Demandas do Setor 
-								</a>
+									Demandas do Setor </a>
 
 
 							</div>
@@ -84,7 +83,7 @@
 									<td class="text-left" th:text="${d.responsavel}"></td>
 									<td class="text-left" th:text="${d.setor}"></td>
 									<td class="text-left" th:text="${d.situacao}"></td>
-									
+
 									<td class="text-left"><a class="btn btn-success"
 										th:href="@{/demanda/view/{id}(id=${d.id})}"> Visualizar</a></td>
 
@@ -103,19 +102,30 @@
 				</div>
 			</div>
 		</div>
-		
-		
+
+
 		<div class="container-fluid" style="width: 90%">
 			<div class="page-header">
 				<div class="row">
 					<div class="col-sm-12">
-						<h4 style="font-size: 20px; color: red;">Demandas para Ajustes</h4>
+						<h4 style="font-size: 20px; color: red;">Demandas para
+							Ajustes</h4>
 					</div>
 
 
 
 
 				</div>
+			</div>
+
+			<div class="modal fade " id="modalAval" tabindex="-1" role="dialog"
+				aria-labelledby="avaliacaoModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+							
+					</div>
+				</div>
+
 			</div>
 
 
@@ -145,12 +155,14 @@
 									<td class="text-left" th:text="${d.responsavel}"></td>
 									<td class="text-left" th:text="${d.setor}"></td>
 									<td class="text-left" th:text="${d.situacao}"></td>
-									<td class="text-left"><a 
+									<td class="text-left"><a
 										th:href="@{/demanda/view/{id}(id=${d.id})}"> Ajustar</a></td>
-									<td class="text-left"><a 
-										th:href="@{/demanda/view/{id}(id=${d.id})}"> Visualizar</a></td>
+									<td class="text-left"><a class=" btn-modal-aval"
+										th:data-href="@{/demanda/recomendacao}" th:data-objeto="${d.id}"
+										data-target="#modalAval" data-toggle="modal">Visualizar
+											Recomendações </a></td>
 
-									<td class="text-left"><a 
+									<td class="text-left"><a
 										th:href="@{/demanda/enviarTIC/{id}(id=${d.id})}"> Enviar
 											Para Área de TIC</a></td>
 
@@ -167,7 +179,28 @@
 		</div>
 
 
+
+
 	</section>
+	
+	
+	<th:block layout:fragment="javascript-extra">
+		<script>
+		$(".btn-modal-aval").click(function() {
+			var link = $(this).attr('data-href');
+			var modal = $(this).attr('data-target');
+			var objeto = $(this).attr('data-objeto');
+
+			var action = link +"/"+objeto;
+			console.log("AQUI....")
+			$(modal).delay(0).queue(function() {
+				$(this).load(action).dequeue();
+
+			});
+
+		});
+		</script>	
+	</th:block>
 
 </body>
 

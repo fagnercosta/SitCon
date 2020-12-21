@@ -114,18 +114,20 @@
 
 								<tbody>
 									<tr>
-										<td><span th:text="${demanda.justificativa}"
-											></span></td>
+										<td><span th:text="${demanda.justificativa}"></span></td>
 
-										<td><span>Art. 10. A fase de
-												Planejamento da Contratação terá início com o recebimento
-												pela Área de TIC do Documento de Oficialização da Demanda,
-												elaborado pela Área Requisitante da solução, que conterá no
-												mínimo: II - explicitação da motivação e dos resultados a
-												serem alcançados com a contratação da solução de TIC;</span></td>
-										<td th:if="${demanda.justtificativaConsistente}" >
-												<i
+										<td><span>Art. 10. A fase de Planejamento da
+												Contratação terá início com o recebimento pela Área de TIC
+												do Documento de Oficialização da Demanda, elaborado pela
+												Área Requisitante da solução, que conterá no mínimo: II -
+												explicitação da motivação e dos resultados a serem
+												alcançados com a contratação da solução de TIC;</span></td>
+										<td th:if="${demanda.justtificativaConsistente}"><i
 											class="glyphicon glyphicon-ok" style="color: green;">SIM</i>
+										</td>
+										
+										<td th:if="${not demanda.justtificativaConsistente}"><i
+											class="glyphicon glyphicon-remove" style="color: red;">NÃO</i>
 										</td>
 
 									</tr>
@@ -304,7 +306,7 @@
 
 
 			</div>
-			
+
 			<div class="row">
 				<div class="col-sm-12" align="left">
 					<div class="col-sm-12">
@@ -314,13 +316,27 @@
 				</div>
 			</div>
 
+			<div class="modal fade " id="avaliacaoModal" tabindex="-1"
+				role="dialog" aria-labelledby="avaliacaoModalLabel"
+				aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						
+					</div>
+				</div>
+
+			</div>
+
 
 
 			<div class="form-group">
-				<a class="btn  btn-danger"
-					th:href="@{/demanda/devolverParaAjustes/{id}(id=${demanda.id})}">Devolver
-					Demanda para Ajustes</a> <a class="btn  btn-danger" th:href="@{/}">Aprovar
-					Demanda</a>
+				<a class="btn  btn-danger btn-modal"
+					data-href="/demanda/entrarTelaAvalicao"
+					th:data-objeto="${demanda.id}" data-target="#avaliacaoModal"
+					data-toggle="modal">Devolver Demanda para Ajustes</a> <a
+					class="btn  btn-danger" th:href="@{/}">Aprovar Demanda</a>
+
+
 			</div>
 
 
@@ -385,6 +401,20 @@
 
 					}
 				})
+
+			});
+
+			$(".btn-modal").click(function() {
+				var link = $(this).attr('data-href');
+				var modal = $(this).attr('data-target');
+				var objeto = $(this).attr('data-objeto');
+
+				var action = link +"/"+objeto;
+
+				$(modal).delay(0).queue(function() {
+					$(this).load(action).dequeue();
+
+				});
 
 			});
 		</script>

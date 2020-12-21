@@ -37,6 +37,10 @@ public class ItemObjetivoEstrategico implements Serializable{
     @ManyToOne
 	@JoinColumn(name = "id_demanda")
 	private Demanda demanda;
+    
+    @ManyToOne
+   	@JoinColumn(name = "id_tr")
+   	private TermoRereferencia tr;
 
 	public Long getId() {
 		return id;
@@ -69,6 +73,14 @@ public class ItemObjetivoEstrategico implements Serializable{
 
 	public void setDemanda(Demanda demanda) {
 		this.demanda = demanda;
+	}
+	
+	public void setTr(TermoRereferencia tr) {
+		this.tr = tr;
+	}
+	
+	public TermoRereferencia getTr() {
+		return tr;
 	}
     
     
