@@ -131,7 +131,7 @@
 								</thead>
 
 								<tbody>
-									<tr th:if="${ lists.isEmpty(objetivos)}" th:each="o : ${objetivos}">
+									<tr th:if="${#lists.isEmpty(objetivos)}" th:each="o : ${objetivos}">
 										<td>
 											<span>Objetivos Estratégicos.. Não Informado</span>
 										</td>

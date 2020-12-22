@@ -79,12 +79,12 @@
 									<tr>
 										<td><span th:text="${termo.objetoContratacao}"></span></td>
 
-										<td><span>Art. 10. A fase de Planejamento da
-												Contratação terá início com o recebimento pela Área de TIC
-												do Documento de Oficialização da Demanda, elaborado pela
-												Área Requisitante da solução, que conterá no mínimo: II -
-												explicitação da motivação e dos resultados a serem
-												alcançados com a contratação da solução de TIC;</span></td>
+										<td><span>Art. 12. O Termo de Referência ou
+												Projeto Básico será elaborado pela Equipe de Planejamento da
+												Contratação a partir do Estudo Técnico Preliminar da
+												Contratação, incluindo, no mínimo, as seguintes informações:
+
+												I - definição do objeto da contratação, conforme art. 13;</span></td>
 										<td th:if="${termo.objetoIspresent}"><i
 											class="glyphicon glyphicon-ok" style="color: green;">SIM</i>
 										</td>
@@ -132,12 +132,12 @@
 									<tr>
 										<td><span th:text="${termo.justificativa}"></span></td>
 
-										<td><span>Art. 10. A fase de Planejamento da
-												Contratação terá início com o recebimento pela Área de TIC
-												do Documento de Oficialização da Demanda, elaborado pela
-												Área Requisitante da solução, que conterá no mínimo: II -
-												explicitação da motivação e dos resultados a serem
-												alcançados com a contratação da solução de TIC;</span></td>
+										<td><span>Art. 15. A justificativa para
+												contratação deverá conter, pelo menos: I - alinhamento da
+												solução de TIC com os instrumentos de planejamento elencados
+												no art. 6º; e II - relação entre a necessidade da
+												contratação da solução de TIC e os respectivos volumes e
+												características do objeto. </span></td>
 										<td th:if="${termo.justificativaIspresent}"><i
 											class="glyphicon glyphicon-ok" style="color: green;">SIM</i>
 										</td>
@@ -155,7 +155,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="row">
 				<div class="col-sm-12" align="left">
 					<div class="col-sm-12">
@@ -199,20 +199,20 @@
 
 										<td th:text="${o.descricaoObjetivo}"></td>
 
-										<td><span style="color: red;"> Art. 10. A fase de
-												Planejamento da Contratação terá início com o recebimento
-												pela Área de TIC do Documento de Oficialização da Demanda,
-												elaborado pela Área Requisitante da solução, que conterá no
-												mínimo: I - necessidade da contratação, considerando os
-												objetivos estratégicos e as necessidades corporativas do
-												órgão ou entidade, bem como o seu alinhamento ao PDTIC e ao
-												Plano Anual de Contratações; </span></td>
+										<td><span style="color: red;"> Art. 15. A
+												justificativa para contratação deverá conter, pelo menos: I
+												- alinhamento da solução de TIC com os instrumentos de
+												planejamento elencados no art. 6º; e II - relação entre a
+												necessidade da contratação da solução de TIC e os
+												respectivos volumes e características do objeto. </span></td>
 
 										<td th:if="${o.descricaoObjetivoConsitente}"><i
 											class="glyphicon glyphicon-ok" style="color: green;">SIM</i></td>
-											
-											<td th:if="${not o.descricaoObjetivoConsitente}">Não foi encontrado nenhuma ocorrencia válida do PDTIC, para o objetivo informado!</td>
-											
+
+										<td th:if="${not o.descricaoObjetivoConsitente}">Não foi
+											encontrado nenhuma ocorrencia válida do PDTIC, para o
+											objetivo informado!</td>
+
 										<td th:if="${not o.descricaoObjetivoConsitente}"><a
 											href="#" style="color: red"
 											title="Não foi encontrado do PDTIC nenhum objetico que coresponde ao Objetivo informado"><i
@@ -226,13 +226,11 @@
 											Não está Atendendo à Legislação <i class=""></i>
 										</td>
 										<td class="text-left"><span style="color: red;">
-												Art. 10. A fase de Planejamento da Contratação terá início
-												com o recebimento pela Área de TIC do Documento de
-												Oficialização da Demanda, elaborado pela Área Requisitante
-												da solução, que conterá no mínimo: I - necessidade da
-												contratação, considerando os objetivos estratégicos e as
-												necessidades corporativas do órgão ou entidade, bem como o
-												seu alinhamento ao PDTIC e ao Plano Anual de Contratações; </span></td>
+												Art. 15. A justificativa para contratação deverá conter,
+												pelo menos: I - alinhamento da solução de TIC com os
+												instrumentos de planejamento elencados no art. 6º; e II -
+												relação entre a necessidade da contratação da solução de TIC
+												e os respectivos volumes e características do objeto. </span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -241,12 +239,13 @@
 					</div>
 				</div>
 			</div>
-			
-			
+
+
 			<div class="row">
 				<div class="col-sm-12" align="left">
 					<div class="col-sm-12">
-						<h2 style="font-size: 20px; font-weight: bold;">2.1. Necessidades Essenciais do PDTIC</h2>
+						<h2 style="font-size: 20px; font-weight: bold;">2.1.
+							Necessidades Essenciais do PDTIC</h2>
 					</div>
 				</div>
 			</div>
@@ -285,20 +284,20 @@
 
 										<td th:text="${o.descricaoObjetivo}"></td>
 
-										<td><span style="color: red;"> Art. 10. A fase de
-												Planejamento da Contratação terá início com o recebimento
-												pela Área de TIC do Documento de Oficialização da Demanda,
-												elaborado pela Área Requisitante da solução, que conterá no
-												mínimo: I - necessidade da contratação, considerando os
-												objetivos estratégicos e as necessidades corporativas do
-												órgão ou entidade, bem como o seu alinhamento ao PDTIC e ao
-												Plano Anual de Contratações; </span></td>
+										<td><span style="color: red;"> Art. 15. A
+												justificativa para contratação deverá conter, pelo menos: I
+												- alinhamento da solução de TIC com os instrumentos de
+												planejamento elencados no art. 6º; e II - relação entre a
+												necessidade da contratação da solução de TIC e os
+												respectivos volumes e características do objeto. </span></td>
 
 										<td th:if="${o.descricaoObjetivoConsitente}"><i
 											class="glyphicon glyphicon-ok" style="color: green;">SIM</i></td>
-											
-											<td th:if="${not o.descricaoObjetivoConsitente}">Não foi encontrado nenhuma ocorrencia válida do PDTIC, para o necessidade informada!</td>
-											
+
+										<td th:if="${not o.descricaoObjetivoConsitente}">Não foi
+											encontrado nenhuma ocorrencia válida do PDTIC, para o
+											necessidade informada!</td>
+
 										<td th:if="${not o.descricaoObjetivoConsitente}"><a
 											href="#" style="color: red"
 											title="Não foi encontrado do PDTIC nenhum objetico que coresponde ao Objetivo informado"><i
@@ -312,18 +311,69 @@
 											Não está Atendendo à Legislação <i class=""></i>
 										</td>
 										<td class="text-left"><span style="color: red;">
-												Art. 10. A fase de Planejamento da Contratação terá início
-												com o recebimento pela Área de TIC do Documento de
-												Oficialização da Demanda, elaborado pela Área Requisitante
-												da solução, que conterá no mínimo: I - necessidade da
-												contratação, considerando os objetivos estratégicos e as
-												necessidades corporativas do órgão ou entidade, bem como o
-												seu alinhamento ao PDTIC e ao Plano Anual de Contratações; </span></td>
+												Art. 15. A justificativa para contratação deverá conter,
+												pelo menos: I - alinhamento da solução de TIC com os
+												instrumentos de planejamento elencados no art. 6º; e II -
+												relação entre a necessidade da contratação da solução de TIC
+												e os respectivos volumes e características do objeto. </span></td>
 									</tr>
 								</tbody>
 							</table>
 						</div>
 
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="col-sm-12" align="left">
+					<div class="col-sm-12">
+						<h2 style="font-size: 20px; font-weight: bold;">3. Requisitos 
+							da Contratação</h2>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="container-fluid" align="left">
+				<div class="table-responsive  bw-tabela-simples">
+					<div class="container-fluid">
+
+						<div class="table-responsive  bw-tabela-simples">
+							<table class="table  table-hover">
+								<thead style="font-size: 20px; font-weight: bold;">
+									<tr>
+										<th>requisitos</th>
+										<th>Requisito Legal</th>
+										<th>Em Comformidade</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<tr>
+										<td><span th:text="${termo.requisitos}"></span></td>
+
+										<td><span>Art. 12. O Termo de Referência ou
+												Projeto Básico será elaborado pela Equipe de Planejamento da
+												Contratação a partir do Estudo Técnico Preliminar da
+												Contratação, incluindo, no mínimo, as seguintes informações:
+
+												V - especificação dos requisitos da contratação, conforme art. 16;</span></td>
+										<td th:if="${termo.objetoIspresent}"><i
+											class="glyphicon glyphicon-ok" style="color: green;">SIM</i>
+										</td>
+
+										<td th:if="${not termo.objetoIspresent}"><i
+											class="glyphicon glyphicon-remove" style="color: red;">NÃO</i>
+										</td>
+
+
+
+									</tr>
+								</tbody>
+							</table>
+						</div>
 					</div>
 				</div>
 			</div>
