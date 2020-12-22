@@ -104,7 +104,7 @@ public class Demanda implements Serializable {
     
     public boolean isApontamantoExiste() {
 		try {
-			return this.apontamentos.isEmpty();
+			return !this.apontamentos.isEmpty();
 		} catch (Exception e) {
 			return false;
 		}
