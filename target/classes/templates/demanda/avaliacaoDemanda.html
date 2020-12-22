@@ -108,6 +108,7 @@
 									<tr>
 										<th>2. JUSTIFICATIVA/MOTIVAÇÃO</th>
 										<th>Requisito Legal</th>
+										
 										<th>Em Comformidade</th>
 									</tr>
 								</thead>
@@ -122,6 +123,9 @@
 												Área Requisitante da solução, que conterá no mínimo: II -
 												explicitação da motivação e dos resultados a serem
 												alcançados com a contratação da solução de TIC;</span></td>
+											
+										
+												
 										<td th:if="${demanda.justtificativaConsistente}"><i
 											class="glyphicon glyphicon-ok" style="color: green;">SIM</i>
 										</td>
@@ -165,6 +169,7 @@
 										<th>Objetivo</th>
 
 										<th>Requisito Legal</th>
+										<td>Crítica</td>
 										<th>Em Conformidade</th>
 
 
@@ -192,6 +197,9 @@
 												objetivos estratégicos e as necessidades corporativas do
 												órgão ou entidade, bem como o seu alinhamento ao PDTIC e ao
 												Plano Anual de Contratações; </span></td>
+												
+										<td th:if="${not o.descricaoObjetivoConsitente}">Não foi encontrado no PDTIC, nehum objetico estratégico que corresponda ao conteúdo informado</td>
+										<td th:if="${o.descricaoObjetivoConsitente}">Texto Consistente</td>
 
 										<td th:if="${o.descricaoObjetivoConsitente}"><i
 											class="glyphicon glyphicon-ok" style="color: green;">SIM</i></td>
@@ -246,6 +254,7 @@
 
 										<th>Necessidade</th>
 										<th>Requisito Legal</th>
+										<th>Crítica</th>
 										<th>Em Conformidade</th>
 
 
@@ -273,6 +282,9 @@
 												objetivos estratégicos e as necessidades corporativas do
 												órgão ou entidade, bem como o seu alinhamento ao PDTIC e ao
 												Plano Anual de Contratações; </span></td>
+												
+										<td th:if="${not n.descricaoNecessidadeConsitente}">Não foi encontrada no PDTIC, nenhuma necessidade que corresponda ao conteúdo informado</td>
+										<td th:if="${n.descricaoNecessidadeConsitente}">Texto Consistente</td>
 
 										<td th:if="${n.descricaoNecessidadeConsitente}">SIM</td>
 										<td th:if="${not n.descricaoNecessidadeConsitente}"><a
