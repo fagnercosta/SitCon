@@ -110,6 +110,10 @@ public class AvaliacaoDOD {
 				}
 			}
 		}
+		System.out.println("Objetivos Estrátéficos");
+		for(String o : objetivosEs) {
+			System.out.println(o.toString());
+		}
 		
 		return objetivos;		
 		
@@ -146,6 +150,11 @@ public class AvaliacaoDOD {
 					break;
 				}
 			}
+		}
+		
+		System.out.println("Necessidades ");
+		for(String n : necessidadeEst) {
+			System.out.println(n.toString());
 		}
 		
 		return necessidades;		
